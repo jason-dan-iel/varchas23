@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <>
-    hi
-    </>
+    <div className="h-screen">
+
+    </div>
   );
 };
 

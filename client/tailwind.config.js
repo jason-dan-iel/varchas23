@@ -19,7 +19,12 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        // "hero-pattern": "url('/src/assets/herobg.png')",
+        "hero-pattern": "url('/src/assets/1.jpeg')",
+      },
+      fontFamily: {
+       Teko : [ 'Teko', "sans-serif"],
+       Eczar : ['Eczar', 'serif'],
       },
     },
   },

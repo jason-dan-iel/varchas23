@@ -7,14 +7,19 @@ import Soch from "./pages/Soch";
 import Team from "./pages/Team";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import StarsCanvas from "./components/canvas/Stars";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 
 
 const App = () => {
   return (
+    <div className="relative z-0  bg-primary  bg-cover bg-no-repeat bg-center">
       <Router>
-    <div className="relative z-0 bg-primary bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <div className="">
           <Navbar />
+          <StarsCanvas />
         </div>
 
         <Routes>
@@ -25,9 +30,13 @@ const App = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/soch" element={<Soch />} />
+
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
-    </div>
       </Router>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 const Soch = () => {
     return(
-        <div className="">
+        <div className="h-screen">
             Hello
         </div>
     )

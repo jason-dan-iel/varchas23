@@ -1,41 +1,151 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
-  return (
-    <nav className="flex justify-center 
-    
-    ">
-      <div
-        className="flex justify-between w-[60%] items-center text-xl text-white
+  const [toggle, setToggle] = useState(false);
 
-    
-        
-        backdrop-blur-sm bg-white/10 ... rounded-b-[15px]
-        shadow-lg
-        "
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/");
+    location.reload();
+  };
+
+  const token = localStorage.getItem("Token");
+
+  return (
+    <nav className="w-full flex items-center py-5 fixed top-2 z-20 justify-center">
+      <ul
+        className="list-none hidden sm:flex justify-between w-[80%] sm:w-[60%] items-center 
+      text-[32px] sm:text-[18px] text-white 
+      backdrop-blur-sm bg-white/10 ... 
+      rounded-b-[15px] shadow-2xl px-2 shadow-[#09FBD3]
+      font-Eczar fixed"
       >
-        <div className="px-2 hover:text-gray-400">
+        <li className="px-2 hover:text-[#09FBD3] ">
           <NavLink to="/events">Event</NavLink>
-        </div>
-        <div className="px-2 hover:text-gray-400">
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
           <NavLink to="/gallery">Gallery</NavLink>
-        </div>
-        <div className="px-2 hover:text-gray-400">
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
           <NavLink to="/soch">Soch</NavLink>
-        </div>
-        <div className="px-2 hover:text-gray-400">
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
+          <NavLink to="/team">Team</NavLink>
+        </li>
+        <li className="px-2 hover:text-[#09FBD3] ">
           <NavLink to="/">
-            <img src="/VLW.png" className="h-12 w-16" />
+            <img src="/VLW1.png" className="h-16 w-16" />
+          </NavLink>
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
+          <NavLink to="/sponsors">Sponsors</NavLink>
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
+          <NavLink to="/aboutus">About us</NavLink>
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
+          {token ? (
+            <NavLink to="/profile">Profile</NavLink>
+          ) : (
+            <NavLink to="/login">LogIn</NavLink>
+          )}
+        </li>
+        <li className="px-2 hover:text-[#09FBD3]">
+          {token ? (
+            <p onClick={handleLogout}>Log Out</p>
+          ) : (
+            <NavLink to="/signup">SignUp</NavLink>
+          )}
+        </li>
+      </ul>
+        <div className="sm:hidden flex flex-1 justify-between items-center">
+        <div className="">
+          <NavLink to="/">
+            <img src="/VLW1.png" className="h-16 w-16" />
           </NavLink>
         </div>
-        <div className="px-2 hover:text-gray-400">
-          <NavLink to="/sponsors">Sponsors</NavLink>
-        </div>
-        <div className="px-2 hover:text-gray-400">
-          <NavLink to="/aboutus">About us</NavLink>
-        </div>
-        <div className="px-2 hover:text-gray-400">
-          <NavLink to="/team">Team</NavLink>
+          <img
+            src={toggle ? close : menu}
+            className="w-[28px] h-[28px] object-contain mr-3"
+            onClick={() => setToggle(!toggle)}
+          />
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/events">Event</NavLink>
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/gallery">Gallery</NavLink>
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/soch">Soch</NavLink>
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/team">Team</NavLink>
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/sponsors">Sponsors</NavLink>
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/aboutus">About us</NavLink>
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                {token ? (
+                  <NavLink to="/profile">Profile</NavLink>
+                ) : (
+                  <NavLink to="/login">LogIn</NavLink>
+                )}
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+              >
+                <NavLink to="/aboutus">About us</NavLink>
+              </li>
+            </ul>
         </div>
       </div>
     </nav>

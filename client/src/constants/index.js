@@ -4,6 +4,15 @@ import {
     backend,
     creator
 } from "../assets"
+
+
+import {
+  baskey,
+  foot,
+  chess,
+  TT
+} from "../assets/eventsicons"
+
 const services = [
   {
     title: "Web Developer",
@@ -25,36 +34,69 @@ const services = [
 
 const events = [
   {
-    title : "Basketball",
-    icon : web,
-  },
-  {
-    title : "Chess",
-    icon : web,
-  },
-  {
     title : "Cricket",
     icon : web,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Football",
+    icon : foot,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Hockey",
+    icon : web,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Kabbadi",
+    icon : web,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Squash",
+    icon : web,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Badminton",
+    icon : web,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Table Tennis",
+    icon : TT,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Lawn Tennis",
+    icon : web,
+    price : "Rs 5000 -/"
+  },
+  {
+    title : "Basketball",
+    icon : baskey,
+    price : "Rs 5000 -/"
   },
   {
     title : "Volleyball",
     icon : web,
+    price : "Rs 5000 -/"
   },
   {
-    title : "Table Tennis",
+    title : "Athletics",
     icon : web,
+    price : "Rs 5000 -/"
   },
   {
-    title : "Weightlifting",
-    icon : web,
+    title : "Chess",
+    icon : chess,
+    price : "Rs 5000 -/"
   },
   {
-    title : "Football",
+    title : "E-Sports",
     icon : web,
-  },
-  {
-    title : "Kabaddi",
-    icon : web,
+    price : "Rs 5000 -/"
   }
 ]
 

@@ -1,9 +1,21 @@
+import Header from "../components/header";
+import Signupcard from "../components/Signupcard";
 const Signup = () => {
-    return(
-        <div className="h-screen">
-            hello
-        </div>
-    )
-}
+  return (
+    <section className="h-screen flex items-center justify-center">
+        <div className="flex flex-col items-center p-2 overflow-auto max:h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
+            
+        <Header
+          heading="Signup to create an account"
+          paragraph="Already have an account? "
+          linkName="Login"
+          linkUrl="/login"
+          logoUrl={"/VLW.png"}
+          />
+        <Signupcard />
+          </div>
+    </section>
+  );
+};
 
-export default Signup
+export default Signup;

@@ -1,26 +1,23 @@
 import { Link } from "react-router-dom";
-import { logos } from "../assets";
+import Header from "../components/header";
+import Logincard from "../components/Logincard";
 
 const Login = () => {
   return (
-    <section>
-    <div className="flex justify-center ">
-      <img alt="" className="h-14 w-14 mt-48" src={logos} />
-    </div>
-    <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
-      Login to your Account
-    </h2>
-    <p className="mt-2 text-center text-sm text-gray-600">
-      {"Don't have an account yet"}{" "}
-      <Link
-        to={"/signup"}
-        className="font-medium text-purple-600 hover:text-purple-500"
-      >
-        {"Signup"}
-      </Link>
-    </p>
-  </section>
-  )
+  <section className="h-screen flex items-center justify-center">
+    <div className="w-fit flex flex-col items-center p-2 shadow shadow-[#09fbd3] ">
+
+    <Header 
+        heading = "Login to your account"
+        paragraph="Don't have an account yet?"
+        linkName="Signup"
+        linkUrl="/signup"
+        logoUrl={"/VLW.png"}
+        />
+        <Logincard />
+        </div>
+  </section>)
+  ;
 };
 
 export default Login;

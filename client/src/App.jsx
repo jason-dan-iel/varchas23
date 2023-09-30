@@ -21,11 +21,13 @@ const App = () => {
   }
   return (
     <div>
-      {isOpen ? (
-        <>
-          <Opening onOpeningComplete={handleOpening} />
-        </>
-      ) : (
+      {
+      // isOpen ? (
+      //   <>
+      //     <Opening onOpeningComplete={handleOpening} />
+      //   </>
+      // ) : 
+      (
         <div className="relative z-0  bg-primary  bg-cover bg-no-repeat bg-center">
           <Router>
             <div className="">

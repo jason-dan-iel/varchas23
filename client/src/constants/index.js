@@ -102,16 +102,6 @@ const events = [
 
 const signupFields=[
   {
-      labelText:"Name",
-      labelFor:"name",
-      id:"name",
-      name:"name",
-      type:"text",
-      autoComplete:"name",
-      isRequired:true,
-      placeholder:"Name"   
-  },
-  {
       labelText:"Username",
       labelFor:"username",
       id:"username",
@@ -119,27 +109,37 @@ const signupFields=[
       type:"text",
       autoComplete:"username",
       isRequired:true,
-      placeholder:"Username"   
+      placeholder:"Enter Username"   
   },
   {
-      labelText:"College",
-      labelFor:"college",
-      id:"college",
-      name:"college",
+    labelText:"Email address",
+    labelFor:"email",
+    id:"email",
+    name:"email",
+    type:"email",
+    autoComplete:"email",
+    isRequired:true,
+    placeholder:"Email address"   
+  },
+  {
+      labelText:"First Name",
+      labelFor:"First Name",
+      id:"first_name",
+      name:"First Name",
       type:"text",
-      autoComplete:"college",
+      autoComplete:"First Name",
       isRequired:true,
-      placeholder:"College"   
+      placeholder:"First Name"   
   },
   {
-      labelText:"Email address",
-      labelFor:"email",
-      id:"email",
-      name:"email",
-      type:"email",
-      autoComplete:"email",
+      labelText:"Last Name",
+      labelFor:"Last Name",
+      id:"last_name",
+      name:"Last Name",
+      type:"text",
+      autoComplete:"Last Name",
       isRequired:true,
-      placeholder:"Email address"   
+      placeholder:" Last Name"   
   },
   {
       labelText:"Password",
@@ -150,6 +150,16 @@ const signupFields=[
       autoComplete:"current-password",
       isRequired:true,
       placeholder:"Password"   
+  },
+  {
+      labelText:"gender",
+      labelFor:"gender",
+      id:"gender",
+      name:"gender",
+      type:"radio",
+      autoComplete:"",
+      isRequired:true,
+      placeholder:"Gender",  
   },
 
 ]

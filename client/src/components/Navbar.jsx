@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { logo, menu, close } from "../assets";
 import { gsap } from 'gsap';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -30,6 +31,9 @@ const Navbar = () => {
       ease: "elastic.out(1, 0.5)",
     })
   }, [])
+
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     localStorage.clear();
     navigate("/");
@@ -45,9 +49,10 @@ const Navbar = () => {
       text-[32px] sm:text-[18px] text-white 
       backdrop-blur-sm bg-white/10 ... 
       rounded-b-[15px] shadow-2xl px-2 shadow-[#09FBD3]
-      font-Eczar fixed"
+      font-Eczar fixed
+      "
       >
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
           <NavLink to="/events">Event</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
@@ -167,7 +172,11 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/aboutus">About us</NavLink>
+              {token ? (
+            <p onClick={handleLogout}>Log Out</p>
+          ) : (
+            <NavLink to="/signup">SignUp</NavLink>
+          )}
             </li>
           </ul>
         </div>

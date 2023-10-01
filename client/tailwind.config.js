@@ -24,6 +24,8 @@ export const theme = {
     fontFamily: {
       Teko: ['Teko', "sans-serif"],
       Eczar: ['Eczar', 'serif'],
+      Londrina_shadow: ['Londrina Shadow', "cursive"],
+      Londrina_sketch: ['Londrina Sketch', "cursive"],
     },
   },
 };

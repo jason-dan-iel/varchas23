@@ -24,19 +24,20 @@ export default function Signupcard() {
 
   //handle Signup API Integration here
   const createAccount = () => {
-    const configuration = {
-      method: "post",
-      url: "https://server-sigma-neon.vercel.app/api/user/register",
-      data: signupState,
-    };
-    axios(configuration)
-      .then((result) => {
-        alert(result.data.success);
-        naviage("/")
-      })
-      .catch((error) => {
-        alert(error.response.data.error);
-      });
+    // const configuration = {
+    //   method: "post",
+    //   url: "https://server-sigma-neon.vercel.app/api/user/register",
+    //   data: signupState,
+    // };
+    // axios(configuration)
+    //   .then((result) => {
+    //     alert(result.data.success);
+    //     naviage("/")
+    //   })
+    //   .catch((error) => {
+    //     alert(error.response.data.error);
+    //   });
+    console.log(signupState);
   };
 
   return (
@@ -54,6 +55,7 @@ export default function Signupcard() {
             type={field.type}
             isRequired={field.isRequired}
             placeholder={field.placeholder}
+            pattern={field.pattern}
           />
         ))}
         <FormAction handleSubmit={handleSubmit} text="Signup" />

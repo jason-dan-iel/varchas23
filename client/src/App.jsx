@@ -22,34 +22,34 @@ const App = () => {
   return (
     <div>
       {
-      // isOpen ? (
-      //   <>
-      //     <Opening onOpeningComplete={handleOpening} />
-      //   </>
-      // ) : 
-      (
-        <div className="relative z-0  bg-primary  bg-cover bg-no-repeat bg-center">
-          <Router>
-            <div className="">
-              <Navbar />
-              <StarsCanvas />
-            </div>
+        isOpen ? (
+          <>
+            <Opening onOpeningComplete={handleOpening} />
+          </>
+        ) :
+          (
+            <div className="relative z-0  bg-primary  bg-cover bg-no-repeat bg-center">
+              <Router>
+                <div className="">
+                  <Navbar />
+                  <StarsCanvas />
+                </div>
 
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/sponsors" element={<Sponsors />} />
-              <Route path="/aboutus" element={<About />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/soch" element={<Soch />} />
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/sponsors" element={<Sponsors />} />
+                  <Route path="/aboutus" element={<About />} />
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/team" element={<Team />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/soch" element={<Soch />} />
 
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-            </Routes>
-          </Router>
-        </div >)
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/signup" element={<Signup />} />
+                </Routes>
+              </Router>
+            </div >)
       }
     </div>
   );

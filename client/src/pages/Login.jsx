@@ -4,20 +4,20 @@ import Logincard from "../components/Logincard";
 
 const Login = () => {
   return (
-  <section className="h-screen flex items-center justify-center">
-    <div className="w-fit flex flex-col items-center p-2 shadow shadow-[#09fbd3] ">
+    <section className="h-screen flex items-center justify-center">
+      <div className="w-fit flex flex-col items-center p-2 shadow shadow-[#09fbd3] ">
 
-    <Header 
-        heading = "Login to your account"
-        paragraph="Don't have an account yet?"
-        linkName="Signup"
-        linkUrl="/signup"
-        logoUrl={"/VLW.png"}
+        <Header
+          heading="Login to your account"
+          paragraph="Don't have an account yet?"
+          linkName="Signup"
+          linkUrl="/signup"
+          logoUrl={"/VLW.png"}
         />
         <Logincard />
-        </div>
-  </section>)
-  ;
+      </div>
+    </section>)
+    ;
 };
 
 export default Login;

@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav id="NAV" className="w-full flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center">
       <ul
-        className="list-none hidden sm:flex justify-between items-center 
+        className="list-none hidden sm:flex justify-between min-w-[80%] items-center 
       text-[32px] sm:text-[18px] text-white 
       backdrop-blur-sm bg-white/10 ... 
       rounded-b-[15px] shadow-2xl px-2 shadow-[#09FBD3]

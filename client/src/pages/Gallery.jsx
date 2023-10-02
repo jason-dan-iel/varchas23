@@ -1,7 +1,8 @@
 const Gallery = () => {
   return (
     <main className="container relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+      <div className="text-center text-5xl font-Londrina_sketch text-emerald-500 mt-7">G A L L E R Y</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
         <div className="grid gap-4">
           <div>
             <img

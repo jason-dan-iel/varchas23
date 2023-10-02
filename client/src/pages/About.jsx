@@ -18,7 +18,7 @@ const TeamCard = ({ index, para }) => {
           }}
           className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
         >
-          <p className="text-[#09fbd3] xl:text-2xl font-serif text-center">{para}</p>
+          <p className="text-[#09fbd3] text-xl xl:text-2xl font-serif text-center">{para}</p>
       
         </motion.div>
       </motion.div>
@@ -28,8 +28,9 @@ const TeamCard = ({ index, para }) => {
 
 const About = () => {
   return (
-    <main className="relative w-full h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0">
-      <div className="mt-20 flex flex-wrap gap-10">
+    <main className="relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
+      <div className="text-emerald-500 mt-12 text-5xl font-Londrina_sketch uppercase">about us </div>
+      <div className="mt-5 flex flex-wrap gap-10">
           <TeamCard 
           index={1}
           para = {"Varchas is the annual sports fest of IIT Jodhpur. Being the largest sports fest of North-West India, Varchas celebrates spirit of sportmanship and serves as platform to showcase the countless hours of perspiration put in by teams to achieve excellence in their sport. Since it's inception in 2011, the grandeur of Varchas has spread far and wide across the best colleges of India."}

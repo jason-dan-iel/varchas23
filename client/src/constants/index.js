@@ -1,17 +1,6 @@
-import {
-    web,
-    mobile,
-    backend,
-    creator
-} from "../assets"
+import { web, mobile, backend, creator } from "../assets";
 
-
-import {
-  baskey,
-  foot,
-  chess,
-  TT
-} from "../assets/eventsicons"
+import { baskey, foot, chess, TT } from "../assets/eventsicons";
 
 const services = [
   {
@@ -34,157 +23,251 @@ const services = [
 
 const events = [
   {
-    title : "Cricket",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "1",
+    title: "Athletics",
+    icon: web,
+    category: " M / W",
+    team: "solo",
+    registerPath: "/create",
   },
   {
-    title : "Football",
-    icon : foot,
-    price : "Rs 5000 -/"
+    id: "2",
+    title: "Badminton",
+    icon: web,
+    category: " M / W",
+    team: "solo",
+    registerPath: "/create",
   },
   {
-    title : "Hockey",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "3",
+    title: "Basketball",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Kabbadi",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "4",
+    title: "Cricket",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Squash",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "5",
+    title: "Football",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Badminton",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "6",
+    title: "Table Tennis",
+    icon: web,
+    category: " M / W",
+    team: "Doubles / Mixed",
+    registerPath: "/create",
   },
   {
-    title : "Table Tennis",
-    icon : TT,
-    price : "Rs 5000 -/"
+    id: "7",
+    title: "Lawn Tennis",
+    icon: web,
+    category: " M / W",
+    team: "doubles / mixed",
+    registerPath: "/create",
   },
   {
-    title : "Lawn Tennis",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "8",
+    title: "Volleyball",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Basketball",
-    icon : baskey,
-    price : "Rs 5000 -/"
+    id: "9",
+    title: "Kabaddi",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Volleyball",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "10",
+    title: "Hockey",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Athletics",
-    icon : web,
-    price : "Rs 5000 -/"
+    id: "11",
+    title: "Squash",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "Chess",
-    icon : chess,
-    price : "Rs 5000 -/"
+    id: "12",
+    title: "Chess",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
   },
   {
-    title : "E-Sports",
-    icon : web,
-    price : "Rs 5000 -/"
-  }
-]
+    id: "13",
+    title: "BGMI",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
+  },
+  {
+    id: "14",
+    title: "Valorant",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
+  },
+  {
+    id: "15",
+    title: "Clash Royale",
+    icon: web,
+    category: " M / W",
+    team: "team",
+    registerPath: "/create",
+  },
+];
 
-const signupFields=[
+const signupFields = [
   {
-      labelText:"Username",
-      labelFor:"username",
-      id:"username",
-      name:"username",
-      type:"text",
-      autoComplete:"username",
-      isRequired:true,
-      placeholder:"Enter Username"   
+    labelText: "Email address",
+    labelFor: "email",
+    id: "email",
+    name: "email",
+    type: "email",
+    autoComplete: "email",
+    isRequired: true,
+    placeholder: "Email address",
   },
   {
-    labelText:"Email address",
-    labelFor:"email",
-    id:"email",
-    name:"email",
-    type:"email",
-    autoComplete:"email",
-    isRequired:true,
-    placeholder:"Email address"   
+    labelText: "First Name",
+    labelFor: "First Name",
+    id: "first_name",
+    name: "First Name",
+    type: "text",
+    autoComplete: "First Name",
+    isRequired: true,
+    placeholder: "First Name",
   },
   {
-      labelText:"First Name",
-      labelFor:"First Name",
-      id:"first_name",
-      name:"First Name",
-      type:"text",
-      autoComplete:"First Name",
-      isRequired:true,
-      placeholder:"First Name"   
+    labelText: "Last Name",
+    labelFor: "Last Name",
+    id: "last_name",
+    name: "Last Name",
+    type: "text",
+    autoComplete: "Last Name",
+    isRequired: true,
+    placeholder: " Last Name",
   },
   {
-      labelText:"Last Name",
-      labelFor:"Last Name",
-      id:"last_name",
-      name:"Last Name",
-      type:"text",
-      autoComplete:"Last Name",
-      isRequired:true,
-      placeholder:" Last Name"   
+    labelText: "Password",
+    labelFor: "password",
+    id: "password",
+    name: "password",
+    type: "password",
+    autoComplete: "current-password",
+    isRequired: true,
+    placeholder: "Password",
   },
   {
-      labelText:"Password",
-      labelFor:"password",
-      id:"password",
-      name:"password",
-      type:"password",
-      autoComplete:"current-password",
-      isRequired:true,
-      placeholder:"Password"   
+    labelText: "gender",
+    labelFor: "gender",
+    id: "gender",
+    name: "gender",
+    type: "dropdown",
+    autoComplete: "",
+    isRequired: true,
+    placeholder: "Gender",
+    options: [
+      { value: "male", label: "Male" },
+      { value: "female", label: "Female" },
+    ],
   },
   {
-      labelText:"gender",
-      labelFor:"gender",
-      id:"gender",
-      name:"gender",
-      type:"radio",
-      autoComplete:"",
-      isRequired:true,
-      placeholder:"Gender",  
+    labelText: "Phone",
+    labelFor: "phone",
+    id: "phone",
+    name: "phone",
+    type: "tel",
+    autoComplete: "",
+    isRequired: true,
+    placeholder: "+91 xxxxxxxxxx",
   },
+  {
+    labelText: "college",
+    labelFor: "college",
+    id: "college",
+    name: "college",
+    type: "text",
+    autoComplete: "college",
+    isRequired: true,
+    placeholder: "College",
+  },
+  {
+    labelText: "State",
+    labelFor: "state",
+    id: "state",
+    name: "state",
+    type: "text",
+    autoComplete: "state",
+    isRequired: true,
+    placeholder: "State",
+  },
+  {
+    labelText: "accomodation_required",
+    labelFor: "accomodation_required",
+    id: "accomodation_required",
+    name: "accomodation_required",
+    type: "dropdown",
+    autoComplete: "",
+    isRequired: true,
+    placeholder: "Accomadation",
+    options: [
+      { value: "yes", label: "Yes" },
+      { value: "no", label: "No" },
+    ],
+  },
+  
+];
 
-]
-
-const loginFields=[
+const loginFields = [
   {
-      labelText:"Email address",
-      labelFor:"email-address",
-      id:"email",
-      name:"email",
-      type:"email",
-      autoComplete:"email",
-      isRequired:true,
-      placeholder:"Email address"   
+    labelText: "Email address",
+    labelFor: "email-address",
+    id: "email",
+    name: "email",
+    type: "email",
+    autoComplete: "email",
+    isRequired: true,
+    placeholder: "Email address",
   },
   {
-      labelText:"Password",
-      labelFor:"password",
-      id:"password",
-      name:"password",
-      type:"password",
-      autoComplete:"current-password",
-      isRequired:true,
-      placeholder:"Password"   
-  }
-]
+    labelText: "Password",
+    labelFor: "password",
+    id: "password",
+    name: "password",
+    type: "password",
+    autoComplete: "current-password",
+    isRequired: true,
+    placeholder: "Password",
+  },
+];
 
-export {services, events, signupFields, loginFields};
+
+export { services, events, signupFields, loginFields};

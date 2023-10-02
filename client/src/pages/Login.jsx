@@ -5,7 +5,7 @@ import Logincard from "../components/Logincard";
 const Login = () => {
   return (
     <section className="h-screen flex items-center justify-center">
-      <div className="w-fit flex flex-col items-center p-2 shadow shadow-[#09fbd3] ">
+      <div className="w-fit flex flex-col items-center p-4 shadow shadow-[#09fbd3] hover:shadow-lg hover:shadow-emerald-300 rounded-2xl">
 
         <Header
           heading="Login to your account"

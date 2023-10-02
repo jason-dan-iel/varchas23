@@ -13,6 +13,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Opening from "./components/Opening";
 import { useState } from "react";
+import TeamCreate from "./pages/CreateTeam";
+import TeamJoin from "./pages/Join";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -47,6 +49,10 @@ const App = () => {
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
+                  
+                  <Route path="/create" element={<TeamCreate />} />
+                  <Route path="/join" element={<TeamJoin />} />
+
                 </Routes>
               </Router>
             </div >)

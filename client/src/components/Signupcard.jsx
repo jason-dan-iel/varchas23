@@ -56,8 +56,10 @@ export default function Signupcard() {
             isRequired={field.isRequired}
             placeholder={field.placeholder}
             pattern={field.pattern}
+            options={field.options}
           />
         ))}
+
         <FormAction handleSubmit={handleSubmit} text="Signup" />
       </div>
     </form>

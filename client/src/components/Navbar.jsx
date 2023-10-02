@@ -6,36 +6,36 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  useEffect(() => {
-    gsap.fromTo(
-      "#NAV",
-      {
-        y: -100,
-        scaleY: 1,
-        scaleX: 1,
-      },
-      {
-        y: 10,
-        scaleY: 1.5,
-        scaleX: 1.5,
-        duration: 2,
-        ease: "elastic.out(1, 0.5)",
-      }
-    )
-    gsap.to("#NAV", {
-      y: 0,
-      scaleY: 1,
-      scaleX: 1,
-      duration: 1,
-      delay: 2,
-      ease: "elastic.out(1, 0.5)",
-    })
-  }, [])
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     "#NAV",
+  //     {
+  //       y: -100,
+  //       scaleY: 1,
+  //       scaleX: 1,
+  //     },
+  //     {
+  //       y: 10,
+  //       scaleY: 1.5,
+  //       scaleX: 1.5,
+  //       duration: 2,
+  //       ease: "elastic.out(1, 0.5)",
+  //     }
+  //   )
+  //   gsap.to("#NAV", {
+  //     y: 0,
+  //     scaleY: 1,
+  //     scaleX: 1,
+  //     duration: 1,
+  //     delay: 2,
+  //     ease: "elastic.out(1, 0.5)",
+  //   })
+  // }, [])
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.clear();
+    localStorage.removeItem("Token");
     navigate("/");
     location.reload();
   };
@@ -43,17 +43,17 @@ const Navbar = () => {
   const token = localStorage.getItem("Token");
 
   return (
-    <nav id="NAV" className="w-full flex items-center py-5 fixed top-2 z-20 justify-center">
+    <nav id="NAV" className="w-full flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center">
       <ul
-        className="list-none hidden sm:flex justify-between w-[80%] sm:w-[60%] items-center 
+        className="list-none hidden sm:flex justify-between items-center 
       text-[32px] sm:text-[18px] text-white 
       backdrop-blur-sm bg-white/10 ... 
       rounded-b-[15px] shadow-2xl px-2 shadow-[#09FBD3]
       font-Eczar fixed
       "
       >
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
-          <NavLink to="/events">Event</NavLink>
+        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg  hover:scale-125 ">
+          <NavLink to="/events">Events</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/gallery">Gallery</NavLink>
@@ -65,15 +65,21 @@ const Navbar = () => {
           <NavLink to="/team">Team</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+          <NavLink to="/sponsors">Sponsors</NavLink>
+        </li>
+        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-150">
           <NavLink to="/">
-            <img src="/VLW1.png" className="h-16 w-16" />
+            <img src="/VLW.png" className="h-16 w-16" />
           </NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          <NavLink to="/sponsors">Sponsors</NavLink>
+          <NavLink to="/aboutus">About us</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          <NavLink to="/aboutus">About us</NavLink>
+          <NavLink to="/create">Create Team</NavLink>
+        </li>
+        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+          <NavLink to="/join">Join Team</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           {token ? (
@@ -90,10 +96,10 @@ const Navbar = () => {
           )}
         </li>
       </ul>
-      <div className="sm:hidden flex flex-1 justify-between items-center">
+      <div className="sm:hidden flex flex-1 justify-between items-center backdrop-blur-sm bg-white/10 ... ">
         <div className="">
           <NavLink to="/">
-            <img src="/VLW1.png" className="h-16 w-16" />
+            <img src="/VLW.png" className="h-16 w-16" />
           </NavLink>
         </div>
         <img
@@ -112,7 +118,7 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/events">Event</NavLink>
+              <NavLink to="/events">Events</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
@@ -153,6 +159,22 @@ const Navbar = () => {
               }}
             >
               <NavLink to="/aboutus">About us</NavLink>
+            </li>
+            <li
+              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
+              onClick={() => {
+                setToggle(!toggle);
+              }}
+            >
+              <NavLink to="/create">Create Team</NavLink>
+            </li>
+            <li
+              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
+              onClick={() => {
+                setToggle(!toggle);
+              }}
+            >
+              <NavLink to="/join">Join Team</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}

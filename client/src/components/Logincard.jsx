@@ -26,24 +26,24 @@ export default function Logincard() {
 
   //Handle Login API Integration here
   const authenticateUser = () => {
-    // const configuration = {
-    //   method: "post",
-    //   // url: "https://server-sigma-neon.vercel.app/api/user/login",
-    //   // url : "http://localhost:3000/api/user/login",
-    //   data: loginState,
-    // };
+    const configuration = {
+      method: "post",
+      url: "https://server-sigma-neon.vercel.app/api/user/login",
+      // url : "http://localhost:3000/api/user/login",
+      data: loginState,
+    };
 
-    // axios(configuration)
-    // .then((result) => {
-    //   alert(result.data.success);
-    //   localStorage.setItem("Token", result.data.token);
-    //   navigate("/");
-    //   location.reload();
-    // })
-    // .catch((error) => {
-    //   alert(error.response.data.error);
-    // });
-    console.log(loginState);
+    axios(configuration)
+    .then((result) => {
+      alert(result.data.success);
+      localStorage.setItem("Token", result.data.token);
+      navigate("/");
+      location.reload();
+    })
+    .catch((error) => {
+      alert(error.response.data.error);
+    });
+    // console.log(loginState);
   };
 
   return (

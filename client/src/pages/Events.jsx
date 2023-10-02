@@ -5,12 +5,17 @@ import { motion } from "framer-motion";
 import { events } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import PDFModal from "../components/PDFModal";
+import RegistrationModal from "../components/RegistrationModal";
 
 // eslint-disable-next-line react/prop-types
 const TeamCard = ({ index, title, icon, price }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isRModalOpen, setIsRModalOpen] = useState(false)
   const openModal = () => {
     setIsModalOpen(true);
+  };
+  const openRModal = () => {
+    setIsRModalOpen(true);
   };
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -29,23 +34,24 @@ const TeamCard = ({ index, title, icon, price }) => {
           <img
             src={icon}
             alt="web-development"
-            className=" object-contain w-16 h-16"
+            className=" object-contain w-24 h-24 rounded-md bg-gray-100 bg-opacity-50"
           />
 
-          <h3 className="text-white text-[20px] font-bold text-center hover:text-[#fb0909]">
+          <h3 className="text-white text-[20px] font-bold text-center px-1 rounded-md bg-gray-100 bg-opacity-50  hover:text-[#fb0909]">
             {title}
           </h3>
           <h3 className="text-white text-[20px] font-bold text-center">
             {price}
           </h3>
           <div className="flex flex-row justify-between gap-4">
-            <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={() => { alert('Click') }}>
+            <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={openRModal}>
               Register
             </button>
             <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={openModal}>
               Rules Book
             </button>
             <PDFModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <RegistrationModal isOpen={isRModalOpen} onClose={() => setIsRModalOpen(false)} />
           </div>
         </motion.div>
       </motion.div>

@@ -35,7 +35,7 @@ const TeamCard = ({ index, title, icon }) => (
 
 const Team = () => {
   return (
-    <main className="relative w-full h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0">
+    <main className="relative w-full h-full sm:h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0">
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <TeamCard key={service.title} index={index} {...service} />

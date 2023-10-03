@@ -269,5 +269,102 @@ const loginFields = [
   },
 ];
 
+export const eventOptions = [
+  {
+    value: '1',
+    label: 'Athletics',
+    category: ['men','women'],
+    teamTypes: ['100m', '200m', '400m', '800m', '1500m', '5000m'],
+  },
+  {
+    value: '2',
+    label: 'Badminton',
+    category: ['men','women','mixed'],
+    teamTypes: ['Team'],
+  },
+  {
+    value: '3',
+    label: 'Basketball',
+    category: ['men','women'],
+    teamTypes: ['Team'],
+  },
+  {
+    value: '4',
+    label: 'Cricket',
+    category: 'men',
+    teamTypes: ['Team'],
+  },
+  {
+    value: '5',
+    label: 'Football',
+    category: ['men','women'],
+    teamTypes: ['Team'],
+  },
+  {
+    value: '6',
+    label: 'Table Tennis',
+    category: ['men','women'],
+    teamTypes: ['Team'],
+  },
+  {
+    value: '7',
+    label: 'Lawn Tennis',
+    category: 'men',
+    teamTypes: ['Team'],
+  },
+  {
+    value: '8',
+    label: 'Volleyball',
+    category: ['men','women'],
+    teamTypes: ['Team'],
+  },
+  {
+    value: '9',
+    label: 'Kabaddi',
+    category: 'men',
+    teamTypes: ['Team'],
+  },
+  {
+    value: '10',
+    label: 'Hockey',
+    category: 'men',
+    teamTypes: ['Team'],
+  },
+  {
+    value: '11',
+    label: 'Squash',
+    category: 'men',
+    teamTypes: ['Single'],
+  },
+  {
+    value: '12',
+    label: 'Chess',
+    category: 'open',
+    teamTypes: ['Single'],
+  },
+  {
+    value: '13',
+    label: 'BGMI',
+    category: 'open',
+    teamTypes: ['Team'],
+  },
+  {
+    value: '14',
+    label: 'Valorant',
+    category: 'open',
+    teamTypes: ['Team'],
+  },
+  {
+    value: '15',
+    label: 'Clash Royale',
+    category: 'open',
+    teamTypes: ['Team'],
+  },
+  // Add more events here
+];
+
+
+export const categoryOptions = ['men', 'women', 'mixed', 'open'];
+export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m','Team', 'Single'];
 
 export { services, events, signupFields, loginFields};

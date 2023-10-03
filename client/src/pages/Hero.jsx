@@ -55,13 +55,15 @@ const Hero = () => {
                 Varchas23
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100 text-[1.5rem]`}>
+            <div className={`${styles.heroSubText} mt-2 text-white-100 text-[1.5rem] sm:flex-none flex gap-4 sm:gap-0`}>
               Vigor 
               <br className="sm:block hidden" />
+              <p className="sm:hidden">|</p>
               Valor 
+              <p className="sm:hidden">|</p>
               <br className="sm:block hidden" />
               Victory
-            </p>
+            </div>
           </div>
         </div>
       </motion.div>

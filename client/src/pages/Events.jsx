@@ -47,10 +47,10 @@ const TeamCard = ({ index, title, icon, price, category, team, registerPath }) =
           <h3 className="text-white text-[20px] font-bold text-center">
             {price}
           </h3>
-          <div className="flex justify-center text-white w-full text-center gap-4 items-center h-full">
+          {/* <div className="flex justify-center text-white w-full text-center gap-4 items-center h-full">
             <div className="shadow uppercase shadow-[#09fbd3] hover:text-[#09fbd3] w-full h-full px-2">{category}</div>
             <div className="shadow uppercase shadow-[#09fbd3] hover:text-[#09fbd3] w-full h-full px-2 ">{team}</div>
-          </div>
+          </div> */}
           {/* <div className="flex flex-row justify-between gap-4"> */}
             <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={register}>
               Register

@@ -47,7 +47,7 @@ const Navbar = () => {
     <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center">
       <ul
         className="list-none hidden sm:flex w-full justify-between items-center 
-      text-[32px] sm:text-[18px] text-white 
+      text-[11px] md:text-[14px] lg:text-[18px] xl:text-[22px]  2xl:text-[27px] text-white 
       backdrop-blur-sm bg-white/10 ... 
       rounded-b-[15px] shadow-xl px-2 shadow-[#09FBD3]
       font-mono fixed capitalize
@@ -70,16 +70,16 @@ const Navbar = () => {
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-150">
           <NavLink to="/">
-            <img src="/VLW.png" className="h-16 w-16" />
+            <img src="/VLW.png" className="xl:h-16 xl:w-16 h-12 w-12" />
           </NavLink>
         </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
           <NavLink to="/aboutus">About us</NavLink>
         </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/create">Create Team</NavLink>
         </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/join">Join Team</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">

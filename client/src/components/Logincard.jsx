@@ -47,7 +47,7 @@ export default function Logincard() {
   };
 
   return (
-    <form className="mt-4 space-y-6 w-96" onSubmit={handleSubmit}>
+    <form className="mt-4 space-y-6 xl:w-96" onSubmit={handleSubmit}>
       <div className="-space-y-px">
         {fields.map((field) => (
           <Input

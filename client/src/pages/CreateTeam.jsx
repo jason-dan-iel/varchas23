@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import FormAction from "../components/formaction";
 import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
+import Select from "react-select";
 const fixedInputClass =
   "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm";
 
@@ -43,7 +44,7 @@ const TeamCreate = () => {
   //   };
   const [selectedEvent, setSelectedEvent] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedTeamType, setSelectedTeamType] = useState("");
+  const [selectedTeamType, setSelectedTeamType] = useState([]);
 
   const eventChangeHandler = (event) => {
     const selectedEventValue = event.target.value;
@@ -62,35 +63,55 @@ const TeamCreate = () => {
       }else{
         categoryList = [categoryValues];
       }
-      setSelectedTeamType("");
+      setSelectedTeamType([]);
       
       let teamValues = selectedEventObj.teamTypes;
       teamList = [];
       setSelectedCategory(teamValues);
-      if(Array.isArray(teamValues)){
-        teamList=teamValues;
-      }else{
-        teamList = [teamValues];
+      for (let i = 0; i<teamValues.length; i++){
+        teamList[i] = {value:teamValues[i], label:teamValues[i]};
       }
+
     }
+    // console.log(teamList);
   };
 
   const categoryChangeHandler = (event) => {
     setSelectedCategory(event.target.value);
-    setSelectedTeamType("");
+    setSelectedTeamType([]);
   };
 
   const teamTypeChangeHandler = (event) => {
     setSelectedTeamType(event.target.value);
   };
 
-  console.log([selectedEvent, selectedCategory, selectedTeamType]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createTeam();
+  }
+
+  const createTeam = () => {
+    // const configuration = {
+    //   method: "post",
+    //   url: "https://server-sigma-neon.vercel.app/api/user/register",
+    //   data: signupState,
+    // };
+    // axios(configuration)
+    //   .then((result) => {
+    //     alert(result.data.success);
+    //     naviage("/")
+    //   })
+    //   .catch((error) => {
+    //     alert(error.response.data.error);
+    //   });
+    console.log({category : selectedCategory,sport : selectedEvent, team : selectedTeamType})
+  }
 
   return (
     <section className="h-screen flex items-center justify-center">
       <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
         <Header heading="Event Registration" logoUrl={"/VLW.png"} />
-        <form className="mt-4 space-y-6 w-96">
+        <form className="mt-4 space-y-6 w-96" onSubmit={handleSubmit}>
           <div className="">
             <div>
               <label>Select an Event:</label>
@@ -127,7 +148,7 @@ const TeamCreate = () => {
             {(
               <div>
                 <label>Select a Team Type:</label>
-                <select
+                {/* <select
                   value={selectedTeamType}
                   onChange={teamTypeChangeHandler}
                   className={fixedInputClass}
@@ -138,10 +159,23 @@ const TeamCreate = () => {
                       {teamType}
                     </option>
                   ))}
-                </select>
+                </select> */}
+                <Select 
+                closeMenuOnSelect={false}
+                defaultValue={"Select a Team Type"}
+                isMulti
+                options = {teamList}
+                value = {selectedTeamType.map((x) => ({
+                  value : x,
+                  label : x,
+                }))}
+                onChange={(selectedOptions) => {
+                  setSelectedTeamType(selectedOptions.map((option) => option.value));
+                }}
+                />
               </div>
             )}
-            {/* <FormAction handleSubmit={handleSubmit} text="Register" /> */}
+            <FormAction handleSubmit={handleSubmit} text="Create Team" />
           </div>
         </form>
       </div>

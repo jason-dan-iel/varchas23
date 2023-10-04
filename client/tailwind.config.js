@@ -26,6 +26,7 @@ export const theme = {
       Eczar: ['Eczar', 'serif'],
       Londrina_shadow: ['Londrina Shadow', "cursive"],
       Londrina_sketch: ['Londrina Sketch', "cursive"],
+      Bungee_outline: ['Bungee Outline', 'cursive'],
     },
   },
 };

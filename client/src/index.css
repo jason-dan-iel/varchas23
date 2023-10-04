@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -37,11 +38,11 @@
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: #09fbd3;
+  background: linear-gradient(-90deg, #09fbd3 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    #09fbd3 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }

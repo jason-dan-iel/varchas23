@@ -195,8 +195,9 @@ const signupFields = [
     isRequired: true,
     placeholder: "Gender",
     options: [
-      { value: "male", label: "Male" },
-      { value: "female", label: "Female" },
+      { value: "M", label: "Male" },
+      { value: "F", label: "Female" },
+      { value: "T", label: "Other" },
     ],
   },
   {
@@ -239,8 +240,8 @@ const signupFields = [
     isRequired: true,
     placeholder: "Accomadation",
     options: [
-      { value: "yes", label: "Yes" },
-      { value: "no", label: "No" },
+      { value: "Y", label: "Yes" },
+      { value: "N", label: "No" },
     ],
   },
   
@@ -274,7 +275,7 @@ export const eventOptions = [
     value: '1',
     label: 'Athletics',
     category: ['men','women'],
-    teamTypes: ['100m', '200m', '400m', '800m', '1500m', '5000m'],
+    teamTypes: ['100m', '200m', '400m', '800m', '1500m', '5000m','4x100m', '4x400m'],
   },
   {
     value: '2',
@@ -365,6 +366,6 @@ export const eventOptions = [
 
 
 export const categoryOptions = ['men', 'women', 'mixed', 'open'];
-export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m','Team', 'Single'];
+export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m','4x100m','4x400m','Team', 'Single'];
 
 export { services, events, signupFields, loginFields};

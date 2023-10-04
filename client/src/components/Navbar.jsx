@@ -44,13 +44,13 @@ const Navbar = () => {
   const token = localStorage.getItem("Token");
 
   return (
-    <nav id="NAV" className="w-full flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center">
+    <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center">
       <ul
-        className="list-none hidden sm:flex justify-between min-w-[80%] items-center 
+        className="list-none hidden sm:flex w-full justify-between items-center 
       text-[32px] sm:text-[18px] text-white 
       backdrop-blur-sm bg-white/10 ... 
-      rounded-b-[15px] shadow-2xl px-2 shadow-[#09FBD3]
-      font-Eczar fixed
+      rounded-b-[15px] shadow-xl px-2 shadow-[#09FBD3]
+      font-mono fixed capitalize
       "
       >
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg  hover:scale-125 ">
@@ -110,7 +110,7 @@ const Navbar = () => {
         />
         <div
           className={`${!toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+        } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
             <li

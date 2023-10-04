@@ -45,13 +45,13 @@ const Hero = () => {
       >
         <div className="flex mt-12 items-center gap-2">
           <div className="flex flex-col justify-center items-center mt-8">
-            <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
+            <div className="w-5 h-5 rounded-full bg-[#09fbd3] " />
             <div className="w-1 sm:h-80 h-40 violet-gradient" />
           </div>
 
           <div>
-            <h1 className={`${styles.heroHeadText} text-white text-[5rem]`}>
-              <span className="text-[#09fbd3] font-Londrina_sketch">
+            <h1 className={`${styles.heroHeadText} text-white text-[3rem] sm:text-[5rem]`}>
+              <span className="text-[#09fbd3] font-Bungee_outline">
                 Varchas23
               </span>
             </h1>
@@ -70,7 +70,7 @@ const Hero = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="xl:flex-1 xl:h-[650px] md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>

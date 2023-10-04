@@ -44,7 +44,7 @@ const Navbar = () => {
   const token = localStorage.getItem("Token");
 
   return (
-    <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center">
+    <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center navbar">
       <ul
         className="list-none hidden sm:flex w-full justify-between items-center 
       text-[11px] md:text-[14px] lg:text-[18px] xl:text-[22px]  2xl:text-[27px] text-white 
@@ -53,6 +53,11 @@ const Navbar = () => {
       font-mono fixed capitalize
       "
       >
+        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-150">
+          <NavLink to="/">
+            <img src="/VLW.png" className="xl:h-16 xl:w-16 h-12 w-12" />
+          </NavLink>
+        </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg  hover:scale-125 ">
           <NavLink to="/events">Events</NavLink>
         </li>
@@ -67,11 +72,6 @@ const Navbar = () => {
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/sponsors">Sponsors</NavLink>
-        </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-150">
-          <NavLink to="/">
-            <img src="/VLW.png" className="xl:h-16 xl:w-16 h-12 w-12" />
-          </NavLink>
         </li>
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
           <NavLink to="/aboutus">About us</NavLink>

@@ -37,6 +37,13 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.navbar .active{
+  color: #67d4df;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #67d4df;
+
+}
+
 .violet-gradient {
   background: #09fbd3;
   background: linear-gradient(-90deg, #09fbd3 0%, rgba(60, 51, 80, 0) 100%);

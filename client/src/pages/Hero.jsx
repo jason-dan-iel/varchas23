@@ -37,7 +37,7 @@ const Hero = () => {
     // </section>
 
     <div
-      className={` flex xl:flex-row flex-col gap-10 overflow-hidden h-screen`}
+      className={` flex xl:flex-row flex-col gap-10 overflow-hidden h-screen bg-gallery bg-cover bg-no-repeat`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}

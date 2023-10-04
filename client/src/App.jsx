@@ -30,7 +30,7 @@ const App = () => {
           </>
         ) :
           ( */}
-            <div className="relative z-0  bg-primary  bg-cover bg-no-repeat bg-center">
+            <div className="relative z-0  bg-primary bg-cover bg-no-repeat bg-center">
               <Router>
                 <div className="">
                   <Navbar />

@@ -9,17 +9,13 @@ import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const TeamCard = ({ index, title, icon, price, category, team, registerPath }) => {
-  // const [isModalOpen, setIsModalOpen] = useState(false)
-  // const openModal = () => {
-  //   setIsModalOpen(true);
-  // };
+
 
   const navigate = useNavigate();
 
   const register = () => {
     navigate(registerPath);
-    // console.log(registerPath);
-    // location.reload();
+
   }
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -38,25 +34,17 @@ const TeamCard = ({ index, title, icon, price, category, team, registerPath }) =
           <img
             src={icon}
             alt="web-development"
-            className=" object-contain w-16 h-16"
+            className=" object-contain w-24 h-24 hover:scale-[1.03] shadow rounded-md"
           />
 
           <h3 className="text-white text-[20px] text-center uppercase  font-Eczar ">
             {title}
           </h3>
-          {/* <div className="flex justify-center text-white w-full text-center gap-4 items-center h-full">
-            <div className="shadow uppercase shadow-[#09fbd3] hover:text-[#09fbd3] w-full h-full px-2">{category}</div>
-            <div className="shadow uppercase shadow-[#09fbd3] hover:text-[#09fbd3] w-full h-full px-2 ">{team}</div>
-          </div> */}
-          {/* <div className="flex flex-row justify-between gap-4"> */}
-            <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:scale-110 p-2 rounded-lg bg-blue-600 hover:bg-blue-400" onClick={register}>
-              Register
-            </button>
-            {/* <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={openModal}>
-              Rules Book
-            </button>
-            <PDFModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
-          {/* </div> */}
+
+          <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:scale-110 p-2 rounded-lg bg-blue-600 hover:bg-blue-400" onClick={register}>
+            Register
+          </button>
+
         </motion.div>
       </motion.div>
     </Tilt>

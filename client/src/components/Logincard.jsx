@@ -34,21 +34,21 @@ export default function Logincard() {
     };
 
     axios(configuration)
-    .then((result) => {
-      alert(result.data.success);
-      localStorage.setItem("Token", result.data.token);
-      navigate("/");
-      location.reload();
-    })
-    .catch((error) => {
-      alert(error.response.data.error);
-    });
+      .then((result) => {
+        alert(result.data.success);
+        localStorage.setItem("Token", result.data.token);
+        navigate("/");
+        location.reload();
+      })
+      .catch((error) => {
+        alert(error.response.data.error);
+      });
     // console.log(loginState);
   };
 
   return (
     <form className="mt-4 space-y-6 xl:w-96" onSubmit={handleSubmit}>
-      <div className="-space-y-px">
+      <div className="-space-y-px ">
         {fields.map((field) => (
           <Input
             key={field.id}

@@ -1,6 +1,6 @@
-import { web, mobile, backend, creator } from "../assets";
+import { web, mobile, backend, creator, Cricket, Football, Athletics, Badminton, Basketball, TableTennis, LawnTennis, VolleyBall, Kabaddi, Hockey, Squash, BGMI, Valo, ClashRoyale } from "../assets";
 
-import { baskey, foot, chess, TT } from "../assets/eventsicons";
+import { chess } from "../assets/eventsicons";
 
 const services = [
   {
@@ -25,7 +25,7 @@ const events = [
   {
     id: "1",
     title: "Athletics",
-    icon: web,
+    icon: Athletics,
     category: " M / W",
     team: "solo",
     registerPath: "/create",
@@ -33,7 +33,7 @@ const events = [
   {
     id: "2",
     title: "Badminton",
-    icon: web,
+    icon: Badminton,
     category: " M / W",
     team: "solo",
     registerPath: "/create",
@@ -41,7 +41,7 @@ const events = [
   {
     id: "3",
     title: "Basketball",
-    icon: web,
+    icon: Basketball,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -49,7 +49,7 @@ const events = [
   {
     id: "4",
     title: "Cricket",
-    icon: web,
+    icon: Cricket,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -57,7 +57,7 @@ const events = [
   {
     id: "5",
     title: "Football",
-    icon: web,
+    icon: Football,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -65,7 +65,7 @@ const events = [
   {
     id: "6",
     title: "Table Tennis",
-    icon: web,
+    icon: TableTennis,
     category: " M / W",
     team: "Doubles / Mixed",
     registerPath: "/create",
@@ -73,7 +73,7 @@ const events = [
   {
     id: "7",
     title: "Lawn Tennis",
-    icon: web,
+    icon: LawnTennis,
     category: " M / W",
     team: "doubles / mixed",
     registerPath: "/create",
@@ -81,7 +81,7 @@ const events = [
   {
     id: "8",
     title: "Volleyball",
-    icon: web,
+    icon: VolleyBall,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -89,7 +89,7 @@ const events = [
   {
     id: "9",
     title: "Kabaddi",
-    icon: web,
+    icon: Kabaddi,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -97,7 +97,7 @@ const events = [
   {
     id: "10",
     title: "Hockey",
-    icon: web,
+    icon: Hockey,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -105,7 +105,7 @@ const events = [
   {
     id: "11",
     title: "Squash",
-    icon: web,
+    icon: Squash,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -113,7 +113,7 @@ const events = [
   {
     id: "12",
     title: "Chess",
-    icon: web,
+    icon: chess,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -121,7 +121,7 @@ const events = [
   {
     id: "13",
     title: "BGMI",
-    icon: web,
+    icon: BGMI,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -129,7 +129,7 @@ const events = [
   {
     id: "14",
     title: "Valorant",
-    icon: web,
+    icon: Valo,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -137,7 +137,7 @@ const events = [
   {
     id: "15",
     title: "Clash Royale",
-    icon: web,
+    icon: ClashRoyale,
     category: " M / W",
     team: "team",
     registerPath: "/create",
@@ -244,7 +244,7 @@ const signupFields = [
       { value: "N", label: "No" },
     ],
   },
-  
+
 ];
 
 const loginFields = [
@@ -274,19 +274,19 @@ export const eventOptions = [
   {
     value: '1',
     label: 'Athletics',
-    category: ['men','women'],
-    teamTypes: ['100m', '200m', '400m', '800m', '1500m', '5000m','4x100m', '4x400m'],
+    category: ['men', 'women'],
+    teamTypes: ['100m', '200m', '400m', '800m', '1500m', '5000m', '4x100m', '4x400m'],
   },
   {
     value: '2',
     label: 'Badminton',
-    category: ['men','women','mixed'],
+    category: ['men', 'women', 'mixed'],
     teamTypes: ['Team'],
   },
   {
     value: '3',
     label: 'Basketball',
-    category: ['men','women'],
+    category: ['men', 'women'],
     teamTypes: ['Team'],
   },
   {
@@ -298,13 +298,13 @@ export const eventOptions = [
   {
     value: '5',
     label: 'Football',
-    category: ['men','women'],
+    category: ['men', 'women'],
     teamTypes: ['Team'],
   },
   {
     value: '6',
     label: 'Table Tennis',
-    category: ['men','women'],
+    category: ['men', 'women'],
     teamTypes: ['Team'],
   },
   {
@@ -316,7 +316,7 @@ export const eventOptions = [
   {
     value: '8',
     label: 'Volleyball',
-    category: ['men','women'],
+    category: ['men', 'women'],
     teamTypes: ['Team'],
   },
   {
@@ -361,11 +361,10 @@ export const eventOptions = [
     category: 'open',
     teamTypes: ['Team'],
   },
-  // Add more events here
 ];
 
 
 export const categoryOptions = ['men', 'women', 'mixed', 'open'];
-export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m','4x100m','4x400m','Team', 'Single'];
+export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m', '4x100m', '4x400m', 'Team', 'Single'];
 
-export { services, events, signupFields, loginFields};
+export { services, events, signupFields, loginFields };

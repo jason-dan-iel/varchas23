@@ -8,6 +8,7 @@ import Input from "../components/input";
 const TeamJoin = () => {
   const navigate = useNavigate();
   const [joinState, setJoinState] = useState("");
+  const token = localStorage.getItem("Token");
 
   useEffect(() => {
     const token = localStorage.getItem("Token");
@@ -30,6 +31,7 @@ const TeamJoin = () => {
 
   const joinTeam = () => {
     const data_j = {teamId : joinState}
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
       method: "post",
       url: "https://server-sigma-neon.vercel.app/api/user/register",

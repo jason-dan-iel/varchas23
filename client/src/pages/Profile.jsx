@@ -21,54 +21,23 @@ export default function Profiles() {
     setDetails(data);
     setEvents(data.events);
   };
+  
   useEffect(() => {
     getuserProfile();
   }, []);
   return (
-    <section className="h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
-          <div className="mt-4 space-y-6 w-96 text-white">
-            <div className="text-center text-xl font-semibold mb-4">
-              Profile
-            </div>
-            <div className="">
-              <div className="flex justify-between">
-                <h3 className=" font-semibold leading-normal text-blueGray-700 mb-2">
-                  Name :
-                </h3>
-                <h3>{details.name} </h3>
-              </div>
+    <section className="h-screen min-h-[100vh] flex items-center justify-center ">
+      <div className="flex xl:flex-row flex-col items-center justify-start">
+      <div className="cta_content p-5 w-[100%] mt-[100px] bg-[#F0EABE] rounded-[20px]" >
+        <div className="section_title_container" >
+          <div className="section_subtitle px-3 py-2 font-bold text-[2rem] text-[#F66B0E]" >Profile</div>
 
-              <div className="flex justify-between">
-                <h3 className=" font-semibold leading-normal text-blueGray-700 mb-2">
-                  Username :
-                </h3>
-                <h3>{details.username} </h3>
-              </div>
-
-              <div className="flex justify-between">
-                <h3 className=" font-semibold leading-normal text-blueGray-700 mb-2">
-                  College :
-                </h3>
-                <h3>{details.college} </h3>
-              </div>
-
-              <div className="flex justify-between">
-                <h3 className=" font-semibold leading-normal text-blueGray-700 mb-2">
-                  Events :
-                </h3>
-                <ul className="list-disc text-left">
-                  {events.map((element) => {
-                    return (
-                      <li key={element}>
-                        {element.charAt(0).toUpperCase() + element.slice(1)}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <div className="section_title p-3 text-[#256D85]"><h1 > Jason Daniel</h1></div>
+          <div className="section_subtitle" ><h3>College : </h3></div>
+          <div className="section_subtitle" ><h3>Team : </h3></div>
+          <div className="section_subtitle" ><h3 >Phone : </h3></div>
+        </div>
+        </div>
       </div>
     </section>
   );

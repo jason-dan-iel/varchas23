@@ -31,6 +31,7 @@ const TeamCreate = () => {
   const eventChangeHandler = (event) => {
     const selectedEventValue = event.target.value;
     setSelectedEvent(selectedEventValue);
+    const token = localStorage.getItem("Token");
 
     // Find the selected event to get its category and team types
     const selectedEventObj = eventOptions.find(
@@ -74,9 +75,11 @@ const TeamCreate = () => {
 
   const createTeam = () => {
     const data_t = {category : selectedCategory,sport : selectedEvent, team : selectedTeamType};
+    console.log(data_t);
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
       method: "post",
-      url: "https://server-sigma-neon.vercel.app/api/user/register",
+      url: "https://api.varchas23.in/registration/createteam",
       data: data_t,
     };
     axios(configuration)

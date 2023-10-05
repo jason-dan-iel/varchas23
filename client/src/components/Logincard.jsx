@@ -30,20 +30,21 @@ export default function Logincard() {
       method: "post",
       // url: "https://server-sigma-neon.vercel.app/api/user/login",
       // url : "http://localhost:3000/api/user/login",
-      url : "http://127.0.0.1:8000/account/userlogin/",
+      url : "https://api.varchas23.in/account/userlogin/",
       data: loginState,
     };
 
     axios(configuration)
       .then((result) => {
-        alert(result.data.success);
+        alert(result.data.message);
         localStorage.setItem("Token", result.data.access_token);
-        localStorage.setItem("refrest_Token", result.data.refresh_token);
+        localStorage.setItem("refresh_Token", result.data.refresh_token);
         navigate("/");
         location.reload();
       })
       .catch((error) => {
-        alert(error.response.data.error);
+        // console.log(error.response.data);
+        alert(error.response.data.message);
       });
     // console.log(loginState);
   };

@@ -3,7 +3,7 @@ import { signupFields } from "../constants";
 import FormAction from "./formaction";
 import Input from "./input";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 
 const fields = signupFields;
 let fieldsState = {};
@@ -12,7 +12,7 @@ fields.forEach((field) => (fieldsState[field.id] = ""));
 
 export default function Signupcard() {
   const [signupState, setSignupState] = useState(fieldsState);
-  const naviage = useNavigate()
+  const navigate = useNavigate()
 
   const handleChange = (e) =>
     setSignupState({ ...signupState, [e.target.id]: e.target.value });
@@ -24,20 +24,43 @@ export default function Signupcard() {
 
   //handle Signup API Integration here
   const createAccount = () => {
-    // const configuration = {
-    //   method: "post",
-    //   url: "https://server-sigma-neon.vercel.app/api/user/register",
-    //   data: signupState,
-    // };
-    // axios(configuration)
-    //   .then((result) => {
-    //     alert(result.data.success);
-    //     naviage("/")
-    //   })
-    //   .catch((error) => {
-    //     alert(error.response.data.error);
-    //   });
     console.log(signupState);
+    const configuration = {
+      method: "post",
+      url: "https://api.varchas23.in/account/userregister/",
+      data: signupState,
+    };
+    axios(configuration)
+      .then((result) => {
+        alert(result.data.success);
+        naviage("/")
+      })
+      .catch((error) => {
+        console.log(error);
+        alert(error.response.data.error);
+      });
+
+  //   const result = await fetch(
+  //     "https://api.varchas23.in/account/userregister",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: signupState,
+  //     }
+  //   );
+
+  //   const jsonData = await result.json();
+  //   console.log(jsonData);
+  //   // try {
+  //   //   alert(jsonData.success);
+  //   //   navigate("/events");
+  //   // } catch (error) {
+  //   //   alert(jsonData.error);
+  //   // }
+
+  //   console.log(signupState);
   };
 
   return (

@@ -7,11 +7,12 @@ import CanvasLoader from "../Loader";
 const Earth = () => {
   // const earth = useGLTF("./planet/scene.gltf");
   const earth = useGLTF("./iitj/ct.glb");
-  // const earth = useGLTF("./iitj/1.glb");
+  // const earth = useGLTF("./iitj/space_station.glb");
 
   return (
     // <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={1} rotation-x={1} rotation-z={1} />
     <primitive object={earth.scene} scale={0.5} position-y={-4.5}  position-x={-1}  rotation-y={0} />
+    // <primitive object={earth.scene} scale={0.25} position-y={0}  position-x={-1}  rotation-y={0} />
   );
 };
 
@@ -32,9 +33,9 @@ const EarthCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
       <directionalLight position={[10, 10, 5]} intensity={5} />
       <directionalLight position={[-10, -10, -5]} intensity={2} />
-      {/* <pointLight intensity={1} /> */}
+      {/* <pointLight intensity={10} /> */}
         <OrbitControls
-          // autoRotate
+          autoRotate
           // autoRotateSpeed={5}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}

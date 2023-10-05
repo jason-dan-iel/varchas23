@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Comingsoon from "../components/comingsoon";
 
 export default function Profiles() {
   const [details, setDetails] = useState({});
@@ -27,7 +28,8 @@ export default function Profiles() {
   }, []);
   return (
     <section className="h-screen min-h-[100vh] flex items-center justify-center ">
-      <div className="flex xl:flex-row flex-col items-center justify-start">
+      <Comingsoon />
+      {/* <div className="flex xl:flex-row flex-col items-center justify-start">
       <div className="cta_content p-5 w-[100%] mt-[100px] bg-[#F0EABE] rounded-[20px]" >
         <div className="section_title_container" >
           <div className="section_subtitle px-3 py-2 font-bold text-[2rem] text-[#F66B0E]" >Profile</div>
@@ -38,7 +40,7 @@ export default function Profiles() {
           <div className="section_subtitle" ><h3 >Phone : </h3></div>
         </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

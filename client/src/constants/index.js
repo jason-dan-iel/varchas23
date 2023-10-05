@@ -2,22 +2,26 @@ import { web, mobile, backend, creator, Cricket, Football, Athletics, Badminton,
 
 import { chess } from "../assets/eventsicons";
 
-const services = [
+export const Teamdata = [
   {
-    title: "Web Developer",
+    title: "Festival Chief",
     icon: web,
+    name : "Harendra",
   },
   {
-    title: "React Native Developer",
+    title: "Festival Chief",
     icon: mobile,
+    name : "Aryan",
   },
   {
-    title: "Backend Developer",
+    title: "Festival Chief",
     icon: backend,
+    name : "Khetan",
   },
   {
-    title: "Content Creator",
+    title: "Festival Chief",
     icon: creator,
+    name : "Navneet",
   },
 ];
 
@@ -414,4 +418,4 @@ export const eventOptions = [
 export const categoryOptions = ['men', 'women', 'mixed', 'open'];
 export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m', '4x100m', '4x400m', 'Team', 'Single'];
 
-export { services, events, signupFields, loginFields };
+export {events, signupFields, loginFields };

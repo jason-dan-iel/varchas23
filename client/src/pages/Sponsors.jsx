@@ -1,7 +1,10 @@
+import Comingsoon from "../components/comingsoon";
+
 const Sponsors = () => {
   return (
     <section className="py-base container relative w-full h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl">
-      <div className="grid gap-8 grid-cols-2 mt-12 md:gap-y-16 md:grid-cols-6">
+      <Comingsoon />
+      {/* <div className="grid gap-8 grid-cols-2 mt-12 md:gap-y-16 md:grid-cols-6">
         <span className="w-full flex items-center justify-center">
           <span className="sr-only">Salesforce logo.</span>
           <div aria-hidden="true">
@@ -420,7 +423,7 @@ const Sponsors = () => {
             </svg>
           </div>
         </span>
-      </div>
+      </div> */}
     </section>
   );
 };

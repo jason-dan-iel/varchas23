@@ -15,6 +15,8 @@ import Opening from "./components/Opening";
 import { useState } from "react";
 import TeamCreate from "./pages/CreateTeam";
 import TeamJoin from "./pages/Join";
+import Payment from "./pages/Payment";
+import VTeam from "./pages/viewTeam";
 
 const App = () => {
   // const [isOpen, setIsOpen] = useState(true);
@@ -52,6 +54,8 @@ const App = () => {
                   
                   <Route path="/create" element={<TeamCreate />} />
                   <Route path="/join" element={<TeamJoin />} />
+                  <Route path="/payment" element={<Payment />} />
+                  <Route path="/view_team" element={<VTeam />} />
 
                 </Routes>
               </Router>

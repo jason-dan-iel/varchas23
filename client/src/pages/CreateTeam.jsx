@@ -5,6 +5,8 @@ import Header from "../components/header";
 import FormAction from "../components/formaction";
 import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
+import axios from "axios";
+
 const fixedInputClass =
   "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm";
 
@@ -22,26 +24,6 @@ const TeamCreate = () => {
     }
   });
 
-  //   const registerEvent = async () => {
-  //     const result = await fetch(
-  //       "https://server-sigma-neon.vercel.app/api/events/register",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({ token: token, event: "civiq" }),
-  //       }
-  //     );
-
-  //     const jsonData = await result.json();
-  //     try {
-  //       alert(jsonData.success);
-  //       navigate("/");
-  //     } catch (error) {
-  //       alert(jsonData.error);
-  //     }
-  //   };
   const [selectedEvent, setSelectedEvent] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedTeamType, setSelectedTeamType] = useState([]);
@@ -91,27 +73,27 @@ const TeamCreate = () => {
   }
 
   const createTeam = () => {
-    // const configuration = {
-    //   method: "post",
-    //   url: "https://server-sigma-neon.vercel.app/api/user/register",
-    //   data: signupState,
-    // };
-    // axios(configuration)
-    //   .then((result) => {
-    //     alert(result.data.success);
-    //     naviage("/")
-    //   })
-    //   .catch((error) => {
-    //     alert(error.response.data.error);
-    //   });
-    console.log({category : selectedCategory,sport : selectedEvent, team : selectedTeamType})
+    const data_t = {category : selectedCategory,sport : selectedEvent, team : selectedTeamType};
+    const configuration = {
+      method: "post",
+      url: "https://server-sigma-neon.vercel.app/api/user/register",
+      data: data_t,
+    };
+    axios(configuration)
+      .then((result) => {
+        alert(result.data.success);
+        naviage("/")
+      })
+      .catch((error) => {
+        alert(error.response.data.error);
+      });
   }
 
   return (
     <section className="h-screen flex items-center justify-center">
       <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
         <Header heading="Event Registration" logoUrl={"/VLW.png"} />
-        <form className="mt-4 space-y-6 w-96" onSubmit={handleSubmit}>
+        <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
           <div className="">
             <div>
               <label>Select an Event:</label>

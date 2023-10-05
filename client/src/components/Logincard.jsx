@@ -28,15 +28,17 @@ export default function Logincard() {
   const authenticateUser = () => {
     const configuration = {
       method: "post",
-      url: "https://server-sigma-neon.vercel.app/api/user/login",
+      // url: "https://server-sigma-neon.vercel.app/api/user/login",
       // url : "http://localhost:3000/api/user/login",
+      url : "http://127.0.0.1:8000/account/userlogin/",
       data: loginState,
     };
 
     axios(configuration)
       .then((result) => {
         alert(result.data.success);
-        localStorage.setItem("Token", result.data.token);
+        localStorage.setItem("Token", result.data.access_token);
+        localStorage.setItem("refrest_Token", result.data.refresh_token);
         navigate("/");
         location.reload();
       })
@@ -47,7 +49,7 @@ export default function Logincard() {
   };
 
   return (
-    <form className="mt-4 space-y-6 xl:w-96" onSubmit={handleSubmit}>
+    <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
       <div className="-space-y-px ">
         {fields.map((field) => (
           <Input

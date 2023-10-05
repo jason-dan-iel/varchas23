@@ -41,7 +41,7 @@ export default function Signupcard() {
   };
 
   return (
-    <form className="mt-4 space-y-6 xl:w-96" onSubmit={handleSubmit}>
+    <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
       <div className="-space-y-px ">
         {fields.map((field) => (
           <Input

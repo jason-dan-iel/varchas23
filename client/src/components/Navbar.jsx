@@ -42,12 +42,13 @@ const Navbar = () => {
   };
 
   const token = localStorage.getItem("Token");
+  const team_token = localStorage.getItem("team_token");
 
   return (
     <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center navbar">
       <ul
         className="list-none hidden sm:flex w-full justify-between items-center 
-      text-[11px] md:text-[14px] lg:text-[18px] xl:text-[22px]  2xl:text-[27px] text-white 
+      text-[11px] md:text-[14px] lg:text-[16px] xl:text-[20px]  2xl:text-[25px] text-white 
       backdrop-blur-sm bg-white/10 ... 
       rounded-b-[15px] shadow-xl px-2 shadow-[#09FBD3]
       font-mono fixed capitalize
@@ -77,10 +78,18 @@ const Navbar = () => {
           <NavLink to="/aboutus">About us</NavLink>
         </li>
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          <NavLink to="/create">Create Team</NavLink>
+          {/* <NavLink to="/create">Create Team</NavLink> */}
+          {team_token ? (
+            <NavLink to="/view_team">View Team</NavLink>
+            ) : (
+            <NavLink to="/create">Create Team</NavLink>
+          )}
         </li>
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/join">Join Team</NavLink>
+        </li>
+        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+          <NavLink to="/payment">Payment</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           {token ? (
@@ -167,7 +176,11 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/create">Create Team</NavLink>
+              {team_token ? (
+            <NavLink to="/view_team">View Team</NavLink>
+            ) : (
+            <NavLink to="/create">Create Team</NavLink>
+          )}
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
@@ -176,6 +189,14 @@ const Navbar = () => {
               }}
             >
               <NavLink to="/join">Join Team</NavLink>
+            </li>
+            <li
+              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
+              onClick={() => {
+                setToggle(!toggle);
+              }}
+            >
+              <NavLink to="/payment">Payment</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}

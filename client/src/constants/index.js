@@ -363,7 +363,6 @@ export const eventOptions = [
   },
 ];
 
-
 export const categoryOptions = ['men', 'women', 'mixed', 'open'];
 export const teamTypeOptions = ['100m', '200m', '400m', '800m', '1500m', '5000m', '4x100m', '4x400m', 'Team', 'Single'];
 

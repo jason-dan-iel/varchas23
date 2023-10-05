@@ -17,7 +17,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <Canvas
-    shadows
+    // shadows
     frameloop='demand'
     dpr={[1, 2]}
     gl={{ preserveDrawingBuffer: false }}
@@ -34,7 +34,7 @@ const EarthCanvas = () => {
       {/* <pointLight intensity={1} /> */}
         <OrbitControls
           autoRotate
-          
+          autoRotateSpeed={5}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

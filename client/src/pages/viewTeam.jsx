@@ -21,13 +21,12 @@ const VTeam = () => {
   const getTeamProfile = () => {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     const configuration = {
-      method: "post",
+      method: "get",
       url: "https://api.varchas23.in/account/displayTeam/",
     };
     axios(configuration)
       .then((result) => {
-        localStorage.setItem("team_token", result.data.team_token);
-        setDetails(result.data.profile);
+        setDetails(result.data.team_data);
         setTeam(result.data.profile.team_id);
         naviage("/");
       })
@@ -56,7 +55,7 @@ const VTeam = () => {
   }, []);
 
   return (
-    <section className="h-screen flex items-center justify-center">
+    <section className="h-screen flex items-center">
       <div className="">
         <div className="flex flex-col items-center justify-center  w-fit p-10 rounded-2xl max-h-[70%] shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10">
           <div className="section_subtitle px-3 py-2 font-bold text-[4.5rem] text-[#F66B0E]">

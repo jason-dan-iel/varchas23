@@ -39,7 +39,7 @@ export default function Logincard() {
         alert(result.data.message);
         localStorage.setItem("Token", result.data.access_token);
         localStorage.setItem("refresh_Token", result.data.refresh_token);
-        localStorage.setItem("team_token", result.data.team_token);
+        // localStorage.setItem("team_token", result.data.team_token);
         navigate("/");
         location.reload();
       })

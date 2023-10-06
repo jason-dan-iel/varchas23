@@ -75,8 +75,8 @@ const TeamCreate = () => {
   }
 
   const createTeam = () => {
-    const data_t = {category : selectedCategory,sport : selectedEvent, team : selectedTeamType};
-    // console.log(data_t);
+    const data_t = {category : selectedCategory,sport : selectedEvent, teams : selectedTeamType, teamsize : 100};
+    console.log(data_t);
     const token = localStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
@@ -87,7 +87,8 @@ const TeamCreate = () => {
     axios(configuration)
       .then((result) => {
         alert(result.data.message);
-        localStorage.setItem("team_token", result.data.team_token)
+        // console.log(result);
+        // localStorage.setItem("team_token", result.data.team_token)
         naviage("/")
       })
       .catch((error) => {
@@ -97,8 +98,8 @@ const TeamCreate = () => {
 
   return (
     <section className="h-screen flex items-center justify-center">
-      <Comingsoon />
-      {/* <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
+      {/* <Comingsoon /> */}
+      <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
         <Header heading="Event Registration" logoUrl={"/VLW.png"} />
         <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
           <div className="">
@@ -155,7 +156,7 @@ const TeamCreate = () => {
             <FormAction handleSubmit={handleSubmit} text="Create Team" />
           </div>
         </form>
-      </div> */}
+      </div>
     </section>
   );
 };

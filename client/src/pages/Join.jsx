@@ -43,7 +43,7 @@ const TeamJoin = () => {
     axios(configuration)
       .then((result) => {
         alert(result.data.message);
-        localStorage.setItem("team_token", result.data.team_token);
+        // localStorage.setItem("team_token", result.data.team_token);
         naviage("/");
       })
       .catch((error) => {
@@ -54,8 +54,8 @@ const TeamJoin = () => {
 
   return (
     <section className="h-screen flex items-center justify-center">
-      <Comingsoon />
-      {/* <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
+      {/* <Comingsoon /> */}
+      <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
         <Header heading="Join Team" logoUrl={"/VLW.png"} />
         <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
           <div className="">
@@ -74,7 +74,7 @@ const TeamJoin = () => {
             <FormAction handleSubmit={handleSubmit} text="Join" />
           </div>
         </form>
-      </div> */}
+      </div>
     </section>
   );
 };

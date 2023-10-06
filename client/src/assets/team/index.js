@@ -3,6 +3,7 @@ import aradhya from "./aradhya.jpeg";
 import ashish from "./ashish.jpg";
 import balaji from "./balaji.jpg";
 import bhanu from "./bhanu.png";
+import akarsh from "./akarsh.png"
 import divyanshu from "./divyanshu.jpg";
 import harsh from "./harsh.jpg";
 import hima from "./hima.jpg";
@@ -64,4 +65,5 @@ export {
   utkarshgupta,
   vijay,
   vishal,
+  akarsh,
 };

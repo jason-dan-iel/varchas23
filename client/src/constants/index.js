@@ -32,7 +32,8 @@ import {
   vishal,
   khetan,
   jason,
-  harendra,} from "../assets/team"
+  harendra,
+  akarsh,} from "../assets/team"
 
 import { chess } from "../assets";
 
@@ -122,6 +123,13 @@ export const Teamdata = [
     instaLink : "https://instagram.com/khartebalaji9575?igshid=OGQ5ZDc2ODk2ZA==",
   },
   {
+    title : "39",
+    imgPath : pratap,
+    Name : "Pratap",
+    Designation : "Sports",
+    instaLink : "#",
+  },
+  {
     title : "6",
     imgPath : pranav,
     Name : "Pranav Kumar",
@@ -144,7 +152,7 @@ export const Teamdata = [
   },
   {
     title : "33",
-    imgPath : "akarsh",
+    imgPath : akarsh,
     Name : "Akarsh",
     Designation : "Web Development",
     instaLink : "https://www.instagram.com/",

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { logo, menu, close } from "../assets";
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -44,7 +44,10 @@ const Navbar = () => {
   const token = localStorage.getItem("Token");
   const team_token = localStorage.getItem("team_token");
   return (
-    <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center navbar">
+    <nav
+      id="NAV"
+      className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center navbar"
+    >
       <ul
         className="list-none hidden sm:flex w-full justify-between items-center 
       text-[11px] md:text-[14px] lg:text-[16px] xl:text-[20px]  2xl:text-[25px] text-white 
@@ -76,21 +79,21 @@ const Navbar = () => {
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
           <NavLink to="/aboutus">About us</NavLink>
         </li>
-          {/* <NavLink to="/create">Create Team</NavLink> */}
+        {/* <NavLink to="/create">Create Team</NavLink> */}
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          {team_token ? (
-            <NavLink to="/view_team">View Team</NavLink>
-            ) : (
-            <NavLink to="/create">Create Team</NavLink>
-          )}
+          <NavLink to="/create">Create Team</NavLink>
         </li>
-        <li className={`${team_token ? "hidden" : ""}  lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125`}>
+        <li
+          className={`lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125`}
+        >
           <NavLink to="/join">Join Team</NavLink>
         </li>
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/payment">Payment</NavLink>
         </li>
-        <li className={` px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125`}>
+        <li
+          className={` px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125`}
+        >
           {token ? (
             <NavLink to="/profile">Profile</NavLink>
           ) : (
@@ -117,8 +120,9 @@ const Navbar = () => {
           onClick={() => setToggle(!toggle)}
         />
         <div
-          className={`${!toggle ? "hidden" : "flex"
-        } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          className={`${
+            !toggle ? "hidden" : "flex"
+          } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
             <li
@@ -175,11 +179,7 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              {team_token ? (
-            <NavLink to="/view_team">View Team</NavLink>
-            ) : (
-            <NavLink to="/create">Create Team</NavLink>
-          )}
+              <NavLink to="/create">Create Team</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
@@ -216,10 +216,10 @@ const Navbar = () => {
               }}
             >
               {token ? (
-            <p onClick={handleLogout}>Log Out</p>
-          ) : (
-            <NavLink to="/signup">SignUp</NavLink>
-          )}
+                <p onClick={handleLogout}>Log Out</p>
+              ) : (
+                <NavLink to="/signup">SignUp</NavLink>
+              )}
             </li>
           </ul>
         </div>

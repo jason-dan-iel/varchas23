@@ -36,20 +36,20 @@ const Payment = () => {
     }
   }, []);
   return (
-    <main className="relative w-full h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
-      {/* <div className="text-emerald-500 mt-7 text-[2.5rem] font-Londrina_sketch">
+    <main className="relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
+      <div className="text-emerald-500 mt-7 text-[2.5rem] font-mono capitalize">
         {Data}
       </div>
 
-      <div className="">
+      <div className="w-[80%]">
         <iframe
           src="https://www.meraevents.com/ticketWidget?eventId=257798&ucode=organizer&wcode=9063CD-9063CD-333333-9063CD-&theme=1"
           width="100%"
           height="600px"
           frameborder="0px"
         ></iframe>
-      </div> */}
-      <Comingsoon />
+      </div>
+      {/* <Comingsoon /> */}
     </main>
   );
 };

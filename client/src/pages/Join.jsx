@@ -43,7 +43,8 @@ const TeamJoin = () => {
     axios(configuration)
       .then((result) => {
         alert(result.data.message);
-        naviage("/")
+        localStorage.setItem("team_token", result.data.team_token);
+        naviage("/");
       })
       .catch((error) => {
         alert(error.response.data.message);

@@ -43,7 +43,6 @@ const Navbar = () => {
 
   const token = localStorage.getItem("Token");
   const team_token = localStorage.getItem("team_token");
-
   return (
     <nav id="NAV" className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center navbar">
       <ul
@@ -77,21 +76,21 @@ const Navbar = () => {
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
           <NavLink to="/aboutus">About us</NavLink>
         </li>
-        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           {/* <NavLink to="/create">Create Team</NavLink> */}
+        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           {team_token ? (
             <NavLink to="/view_team">View Team</NavLink>
             ) : (
             <NavLink to="/create">Create Team</NavLink>
           )}
         </li>
-        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+        <li className={`${team_token ? "hidden" : ""}  lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125`}>
           <NavLink to="/join">Join Team</NavLink>
         </li>
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/payment">Payment</NavLink>
         </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
+        <li className={` px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125`}>
           {token ? (
             <NavLink to="/profile">Profile</NavLink>
           ) : (

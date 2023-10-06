@@ -87,6 +87,7 @@ const TeamCreate = () => {
     axios(configuration)
       .then((result) => {
         alert(result.data.message);
+        localStorage.setItem("team_token", result.data.team_token)
         naviage("/")
       })
       .catch((error) => {

@@ -29,8 +29,10 @@ import vishal from "./vishal.jpg";
 import jason from "./jason.jpeg";
 import khetan from "./khetan.png";
 import aryan from "./aryan.png";
+import harendra from "./hp.png"
 
 export {
+  harendra,
   khetan,
   jason,
   aryan,

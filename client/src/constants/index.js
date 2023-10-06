@@ -31,7 +31,8 @@ import {
   vijay,
   vishal,
   khetan,
-  jason,} from "../assets/team"
+  jason,
+  harendra,} from "../assets/team"
 
 import { chess } from "../assets/eventsicons";
 
@@ -45,7 +46,7 @@ export const Teamdata = [
   },
   {
     title : "2",
-    imgPath : "",
+    imgPath : harendra,
     Name : "Harendra Pal",
     Designation : "Festival Chief",
     instaLink : "https://www.instagram.com/tomarharendrapal__up80_/",
@@ -63,6 +64,62 @@ export const Teamdata = [
     Name : "Ketan Tomar",
     Designation : "Festival Chief",
     instaLink : "",
+  },
+  {
+    title : "23",
+    imgPath : aradhya,
+    Name : "Dr. Aradhya Giri",
+    Designation : "Public Relations",
+    instaLink : "https://www.instagram.com/ara_dhyagiri/?hl=en",
+  },
+  {
+    title : "24",
+    imgPath : shivangi,
+    Name : "Shivangi Garg",
+    Designation : "Public Relations",
+    instaLink : "https://instagram.com/shivangigarg00?igshid=MzMyNGUyNmU2YQ==",
+  },
+  {
+    title : "25",
+    imgPath : harsh,
+    Name : "Harsh Vardhan",
+    Designation : "Public Relations",
+    instaLink : "https://instagram.com/_hvk__27_?igshid=MzRlODBiNWFlZA==",
+  },
+  {
+    title : "26",
+    imgPath : utkarshgupta,
+    Name : "Utkarsh Gupta",
+    Designation : "Public Relations",
+    instaLink : "https://instagram.com/utkarshgupta__07?igshid=OGQ5ZDc2ODk2ZA==",
+  },
+  {
+    title : "7",
+    imgPath : karan,
+    Name : "Karan Shisode",
+    Designation : "Sports",
+    instaLink : "https://www.instagram.com/admiral.karan/",
+  },
+  {
+    title : "8",
+    imgPath : rachit,
+    Name : "Rachit Kataria",
+    Designation : "Sports",
+    instaLink : "https://instagram.com/rachitkatxria?igshid=NzZlODBkYWE4Ng==",
+  },
+  {
+    title : "9",
+    imgPath : saurabh,
+    Name : "Saurabh",
+    Designation : "Sports",
+    instaLink : "https://www.instagram.com/meenakumarsaurabh/",
+  },
+  {
+    title : "10",
+    imgPath : balaji,
+    Name : "Balaji Kharte",
+    Designation : "Sports",
+    instaLink : "https://instagram.com/khartebalaji9575?igshid=OGQ5ZDc2ODk2ZA==",
   },
   {
     title : "6",
@@ -92,34 +149,7 @@ export const Teamdata = [
     Designation : "Web Development",
     instaLink : "https://www.instagram.com/",
   },
-  {
-    title : "7",
-    imgPath : karan,
-    Name : "Karan Shishode",
-    Designation : "Sports",
-    instaLink : "https://www.instagram.com/admiral.karan/",
-  },
-  {
-    title : "8",
-    imgPath : rachit,
-    Name : "Rachit Kataria",
-    Designation : "Sports",
-    instaLink : "https://instagram.com/rachitkatxria?igshid=NzZlODBkYWE4Ng==",
-  },
-  {
-    title : "9",
-    imgPath : saurabh,
-    Name : "Saurabh",
-    Designation : "Sports",
-    instaLink : "https://www.instagram.com/meenakumarsaurabh/",
-  },
-  {
-    title : "10",
-    imgPath : balaji,
-    Name : "Balaji Kharte",
-    Designation : "Sports",
-    instaLink : "https://instagram.com/khartebalaji9575?igshid=OGQ5ZDc2ODk2ZA==",
-  },
+  
   {
     title : "11",
     imgPath : rohit,
@@ -204,34 +234,7 @@ export const Teamdata = [
     Designation : "ATS",
     instaLink : "https://instagram.com/hima_varshi.02?utm_source=qr&igshid=MThlNWY1MzQwNA==",
   },
-  {
-    title : "23",
-    imgPath : aradhya,
-    Name : "Dr. Aradhya Giri",
-    Designation : "Public Relations",
-    instaLink : "https://www.instagram.com/ara_dhyagiri/?hl=en",
-  },
-  {
-    title : "24",
-    imgPath : shivangi,
-    Name : "Shivangi Garg",
-    Designation : "Public Relations",
-    instaLink : "https://instagram.com/shivangigarg00?igshid=MzMyNGUyNmU2YQ==",
-  },
-  {
-    title : "25",
-    imgPath : harsh,
-    Name : "Harsh Vardhan",
-    Designation : "Public Relations",
-    instaLink : "https://instagram.com/_hvk__27_?igshid=MzRlODBiNWFlZA==",
-  },
-  {
-    title : "26",
-    imgPath : utkarshgupta,
-    Name : "Utkarsh Gupta",
-    Designation : "Public Relations",
-    instaLink : "https://instagram.com/utkarshgupta__07?igshid=OGQ5ZDc2ODk2ZA==",
-  },
+  
   {
     title : "27",
     imgPath : swapnil,

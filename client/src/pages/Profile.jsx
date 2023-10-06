@@ -1,37 +1,42 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Comingsoon from "../components/comingsoon";
+import axios from "axios";
 
 export default function Profiles() {
   const [details, setDetails] = useState({});
-  const [events, setEvents] = useState([]);
 
   const token = localStorage.getItem("Token");
-  const getuserProfile = async () => {
-    const user = await fetch(
-      "https://api.varchas23.in/account/displayProfile/",
-      {
-        method: "POST",
-        body: JSON.stringify({ token: token }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    const data = await user.json();
+
+  const getuserProfile = () => {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const configuration = {
+      method: "post",
+      url: "https://api.varchas23.in/account/displayProfile/",
+    };
+    axios(configuration)
+      .then((result) => {
+        localStorage.setItem("team_token", result.data.team_token)
+        setDetails(result.data.profile);
+        naviage("/")
+      })
+      .catch((error) => {
+        console.log(error)
+        alert(error.response.data.message);
+      });
+  }
     // const data = {
     //   team_id: "adfdafadsf",
     //   college: "IIT Jodhpur",
     //   phone: "7340293578",
     //   name: "Jason Daniel",
     // };
-    setDetails(data);
     // setEvents(data.events);
-  };
 
   useEffect(() => {
     getuserProfile();
   }, []);
+
   return (
     <section className="h-screen flex items-center justify-center">
       <div className="flex flex-col items-center justify-center  w-fit p-10 rounded-2xl max-h-[70%] shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10">

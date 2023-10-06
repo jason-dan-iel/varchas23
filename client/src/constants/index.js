@@ -33,14 +33,15 @@ import {
   khetan,
   jason,
   harendra,
-  akarsh,} from "../assets/team"
+  akarsh,
+  navneet,} from "../assets/team"
 
 import { chess } from "../assets";
 
 export const Teamdata = [
   {
     title : "1",
-    imgPath : "",
+    imgPath : navneet,
     Name : "Navneet Meena",
     Designation : "Festival Chief",
     instaLink : "https://www.instagram.com/_navneet_meena_/",

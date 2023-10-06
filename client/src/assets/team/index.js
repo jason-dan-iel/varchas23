@@ -31,9 +31,11 @@ import jason from "./jason.jpeg";
 import khetan from "./khetan.png";
 import aryan from "./aryan.png";
 import harendra from "./hp.png"
+import navneet from "./navneet.jpg"
 
 export {
   harendra,
+  navneet,
   khetan,
   jason,
   aryan,

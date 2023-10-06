@@ -71,7 +71,7 @@ const Navbar = () => {
           <NavLink to="/soch">Soch</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          <NavLink to="/team">Team</NavLink>
+          <NavLink to="/team">Our Team</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/sponsors">Sponsors</NavLink>
@@ -155,7 +155,7 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/team">Team</NavLink>
+              <NavLink to="/team">Our Team</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}

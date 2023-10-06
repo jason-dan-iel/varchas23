@@ -15,25 +15,21 @@ const Payment = () => {
     }
   });
   useEffect(() => {
-    if (localStorage.getItem("Token") === null) {
-      window.location.href = "/";
-    } else {
-      (async () => {
-        try {
-          axios.defaults.headers.common[
-            "Authorization"
-          ] = `Bearer ${localStorage.getItem("Token")}`;
-          const response = await axios.get("https://api.varchas23.in/payment", {
-            headers: { "Content-Type": "application/json" },
-          });
-          // console.log(response.data.message);
-          setData(response.data.message);
-          console.log(Data);
-        } catch (error) {
-          console.error(error);
-        }
-      })();
-    }
+    async () => {
+      try {
+        axios.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${localStorage.getItem("Token")}`;
+        const response = await axios.get("https://api.varchas23.in/payment", {
+          headers: { "Content-Type": "application/json" },
+        });
+
+        console.log(response.data.message);
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
+    };
   }, []);
   return (
     <main className="relative w-full h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">

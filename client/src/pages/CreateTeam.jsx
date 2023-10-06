@@ -26,6 +26,7 @@ const TeamCreate = () => {
   });
 
   const [selectedEvent, setSelectedEvent] = useState("");
+  const [size, setSize] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedTeamType, setSelectedTeamType] = useState([]);
 
@@ -65,17 +66,13 @@ const TeamCreate = () => {
     setSelectedTeamType([]);
   };
 
-  const teamTypeChangeHandler = (event) => {
-    setSelectedTeamType(event.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     createTeam();
   }
 
   const createTeam = () => {
-    const data_t = {category : selectedCategory,sport : selectedEvent, teams : selectedTeamType, teamsize : 100};
+    const data_t = {category : selectedCategory,sport : selectedEvent, teams : selectedTeamType, teamsize : size};
     console.log(data_t);
     const token = localStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -153,6 +150,15 @@ const TeamCreate = () => {
                 />
               </div>
             )}
+            <br /> 
+            <input
+            className= {fixedInputClass}
+            type="number"
+            required
+            placeholder="Enter Team Size"
+            id="teamsize"
+            onChange={((e) =>(setSize(e.target.value)))}
+            ></input>
             <FormAction handleSubmit={handleSubmit} text="Create Team" />
           </div>
         </form>

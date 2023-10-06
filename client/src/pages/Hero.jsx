@@ -41,25 +41,29 @@ const Hero = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] p-8 rounded-2xl"
+        className="hidden sm:block p-8 rounded-2xl"
       >
-        <div className="flex mt-12 items-center gap-2">
+        <div className="flex mt-12 items-center gap-2 ">
           <div className="flex flex-col justify-center items-center mt-8">
             <div className="w-5 h-5 rounded-full bg-[#09fbd3] " />
             <div className="w-1 sm:h-80 h-40 violet-gradient" />
           </div>
 
-          <div>
-            <h1 className={`${styles.heroHeadText} text-white text-[3rem] sm:text-[5rem]`}>
+          <div className="">
+            <h1
+              className={`${styles.heroHeadText} text-white text-[3rem] sm:text-[5rem]`}
+            >
               <span className="text-[#09fbd3] font-Bungee_outline">
                 Varchas23
               </span>
             </h1>
-            <div className={`${styles.heroSubText} mt-2 text-white-100 text-[1.5rem] sm:flex-none flex gap-4 sm:gap-0`}>
-              Vigor 
+            <div
+              className={`${styles.heroSubText} mt-2 text-white-100 text-[1.5rem] sm:flex-none flex gap-4 sm:gap-0`}
+            >
+              Vigor
               <br className="sm:block hidden" />
               <p className="sm:hidden">|</p>
-              Valor 
+              Valor
               <p className="sm:hidden">|</p>
               <br className="sm:block hidden" />
               Victory
@@ -67,13 +71,9 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-[650px] lg:h-[550px] h-[350px]"
-      >
-        {/* <EarthCanvas /> */}
-      </motion.div>
+        <div className="sm:hidden h-full items-center flex">
+          <img src="/logo.png" />
+        </div>
     </div>
   );
 };

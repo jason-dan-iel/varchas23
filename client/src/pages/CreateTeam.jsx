@@ -17,7 +17,6 @@ const token = localStorage.getItem("Token");
 const TeamCreate = () => {
   const navigate = useNavigate();
   useEffect(() => {
-
     if (!token) {
       const jsonData = { error: "Kindly Login First" };
       alert(jsonData.error);
@@ -43,20 +42,19 @@ const TeamCreate = () => {
       let categoryValues = selectedEventObj.category;
       categoryList = [];
       setSelectedCategory(categoryValues);
-      if(Array.isArray(categoryValues)){
-        categoryList=categoryValues;
-      }else{
+      if (Array.isArray(categoryValues)) {
+        categoryList = categoryValues;
+      } else {
         categoryList = [categoryValues];
       }
       setSelectedTeamType([]);
-      
+
       let teamValues = selectedEventObj.teamTypes;
       teamList = [];
       setSelectedCategory(teamValues);
-      for (let i = 0; i<teamValues.length; i++){
-        teamList[i] = {value:teamValues[i], label:teamValues[i]};
+      for (let i = 0; i < teamValues.length; i++) {
+        teamList[i] = { value: teamValues[i], label: teamValues[i] };
       }
-
     }
     // console.log(teamList);
   };
@@ -69,11 +67,33 @@ const TeamCreate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     createTeam();
-  }
+  };
 
   const createTeam = () => {
-    const data_t = {category : selectedCategory,sport : selectedEvent, teams : selectedTeamType, teamsize : size};
-    console.log(data_t);
+    const list = [
+      "4",
+      "20",
+      "20",
+      "20",
+      "20",
+      "2",
+      "2",
+      "20",
+      "20",
+      "20",
+      "1",
+      "1",
+      "4",
+      "5",
+      "1",
+    ];
+    const data_t = {
+      category: selectedCategory,
+      sport: selectedEvent,
+      teams: selectedTeamType,
+      teamsize: list[selectedEvent - 1],
+    };
+    // console.log(data_t);
     const token = localStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
@@ -86,12 +106,12 @@ const TeamCreate = () => {
         alert(result.data.message);
         // console.log(result);
         // localStorage.setItem("team_token", result.data.team_token)
-        naviage("/payment")
+        navigate("/payment")
       })
       .catch((error) => {
         alert(error.response.data.message);
       });
-  }
+  };
 
   return (
     <section className="h-screen flex items-center justify-center">
@@ -115,7 +135,7 @@ const TeamCreate = () => {
                 ))}
               </select>
             </div>
-            {(
+            {
               <div>
                 <label>Select a Category:</label>
                 <select
@@ -131,34 +151,27 @@ const TeamCreate = () => {
                   ))}
                 </select>
               </div>
-            )}
-            {(
+            }
+            {
               <div>
                 <label>Select a Team Type:</label>
-                <Select 
-                closeMenuOnSelect={false}
-                defaultValue={"Select a Team Type"}
-                isMulti
-                options = {teamList}
-                value = {selectedTeamType.map((x) => ({
-                  value : x,
-                  label : x,
-                }))}
-                onChange={(selectedOptions) => {
-                  setSelectedTeamType(selectedOptions.map((option) => option.value));
-                }}
+                <Select
+                  closeMenuOnSelect={false}
+                  defaultValue={"Select a Team Type"}
+                  isMulti
+                  options={teamList}
+                  value={selectedTeamType.map((x) => ({
+                    value: x,
+                    label: x,
+                  }))}
+                  onChange={(selectedOptions) => {
+                    setSelectedTeamType(
+                      selectedOptions.map((option) => option.value)
+                    );
+                  }}
                 />
               </div>
-            )}
-            <br /> 
-            <input
-            className= {fixedInputClass}
-            type="number"
-            required
-            placeholder="Enter Team Size"
-            id="teamsize"
-            onChange={((e) =>(setSize(e.target.value)))}
-            ></input>
+            }
             <FormAction handleSubmit={handleSubmit} text="Create Team" />
           </div>
         </form>

@@ -649,26 +649,26 @@ export const eventOptions = [
     value: '12',
     label: 'Chess',
     category: 'open',
-    teamTypes: ['Single'],
+    teamTypes: ['Blitz', 'Classical'],
   },
-  {
-    value: '13',
-    label: 'BGMI',
-    category: 'open',
-    teamTypes: ['Team'],
-  },
-  {
-    value: '14',
-    label: 'Valorant',
-    category: 'open',
-    teamTypes: ['Team'],
-  },
-  {
-    value: '15',
-    label: 'Clash Royale',
-    category: 'open',
-    teamTypes: ['Team'],
-  },
+  // {
+  //   value: '13',
+  //   label: 'BGMI',
+  //   category: 'open',
+  //   teamTypes: ['Team'],
+  // },
+  // {
+  //   value: '14',
+  //   label: 'Valorant',
+  //   category: 'open',
+  //   teamTypes: ['Team'],
+  // },
+  // {
+  //   value: '15',
+  //   label: 'Clash Royale',
+  //   category: 'open',
+  //   teamTypes: ['Team'],
+  // },
 ];
 
 export const categoryOptions = ['men', 'women', 'mixed', 'open'];

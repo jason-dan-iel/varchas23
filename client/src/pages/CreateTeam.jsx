@@ -89,7 +89,7 @@ const TeamCreate = () => {
         alert(result.data.message);
         // console.log(result);
         // localStorage.setItem("team_token", result.data.team_token)
-        naviage("/")
+        naviage("/payment")
       })
       .catch((error) => {
         alert(error.response.data.message);

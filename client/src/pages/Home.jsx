@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 
-const Home = () =>{
-    return(
+const Home = () => {
+    return (
         <main>
             <Hero />
         </main>

@@ -9,7 +9,7 @@ export default function Profiles() {
   const token = localStorage.getItem("Token");
   const getuserProfile = async () => {
     const user = await fetch(
-      "https://server-sigma-neon.vercel.app/api/user/getUser",
+      "https://api.varchas23.in/account/displayProfile/",
       {
         method: "POST",
         body: JSON.stringify({ token: token }),
@@ -19,28 +19,39 @@ export default function Profiles() {
       }
     );
     const data = await user.json();
+    // const data = {
+    //   team_id: "adfdafadsf",
+    //   college: "IIT Jodhpur",
+    //   phone: "7340293578",
+    //   name: "Jason Daniel",
+    // };
     setDetails(data);
-    setEvents(data.events);
+    // setEvents(data.events);
   };
-  
+
   useEffect(() => {
     getuserProfile();
   }, []);
   return (
-    <section className="h-screen min-h-[100vh] flex items-center justify-center ">
-      <Comingsoon />
-      {/* <div className="flex xl:flex-row flex-col items-center justify-start">
-      <div className="cta_content p-5 w-[100%] mt-[100px] bg-[#F0EABE] rounded-[20px]" >
-        <div className="section_title_container" >
-          <div className="section_subtitle px-3 py-2 font-bold text-[2rem] text-[#F66B0E]" >Profile</div>
+    <section className="h-screen flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center  w-fit p-10 rounded-2xl max-h-[70%] shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10">
+        <div className="section_subtitle px-3 py-2 font-bold text-[5rem] text-[#F66B0E]">
+          Profile
+        </div>
 
-          <div className="section_title p-3 text-[#256D85]"><h1 > Jason Daniel</h1></div>
-          <div className="section_subtitle" ><h3>College : </h3></div>
-          <div className="section_subtitle" ><h3>Team : </h3></div>
-          <div className="section_subtitle" ><h3 >Phone : </h3></div>
+        <div className=" text-[#256D85] text-[2.5rem]">
+          <h1> {details.name}</h1>
         </div>
+        <div className="flex gap-6 text-[1.5rem] items-center text-[#a5ba81] ">
+          <h3 className="text-[2rem] text-[#cd88de] text-right">College :</h3> {details.college}{" "}
         </div>
-      </div> */}
+        <div className="flex gap-6 text-[1.5rem]  items-center text-[#a5ba81] ">
+          <h3 className="text-[2rem] text-[#cd88de]">Team ID: </h3> {details.team_id}{" "}
+        </div>
+        <div className="flex gap-6 text-[1.5rem] items-center text-[#a5ba81]">
+          <h3 className="text-[2rem] text-[#cd88de]">Phone : </h3> {details.phone}
+        </div>
+      </div>
     </section>
   );
 }

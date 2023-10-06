@@ -72,7 +72,7 @@ const Hero = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-[650px] lg:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        {/* <EarthCanvas /> */}
       </motion.div>
     </div>
   );

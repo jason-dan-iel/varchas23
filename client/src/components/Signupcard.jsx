@@ -70,42 +70,41 @@ export default function Signupcard() {
               <li>
                 Indian Institute of Technology, Jodhpur and its students are not
                 responsible for any mishappening that may or may not occur
-                during my visit to Varchas Winter 2022.
+                during my visit to Varchas 2023.
               </li>
               <li>
-                I will not inflict any damage on any object present in the
-                accomodation facilities.
+              I will not inflict any damage on any object present in the accommodation facilities and on campus and if found then there will be a fine/ team disqualification charged to me.
               </li>
               <li>
-                I will not indulge in any physical and/or verbal fights which
-                may or may not happen during my visit to Varchas Winter 2022
+              I will not administer or consume any type of alcoholic and/or narcotics substances. If found, I will be liable to pay a fine of INR 5000.
               </li>
               <li>
-                I will not administer or consume any type of alcholic and/or
-                narcotic substances.
+              I will behave in a respectful and responsible manner towards everyone during my visit to Varchas, 2023.
               </li>
               <li>
-                I will behave in a respectful and responsible manner towards
-                everyone during my visit to Varchas Winter 2022.
+              I will not invite anyone to my particular accommodation allotted to me who is not documented for their stay in the same accommodation.
               </li>
               <li>
-                I will not invite anyone to my particular accomodation alloted
-                to me who is not documented for their stay in the same
-                accomodation.
+              I will not visit any prohibited areas as instructed. If found included, I will be liable to pay a fine of INR 2500.
               </li>
               <li>
-                I will bring original college identity proof along with a valid
-                Aadhar Card, which is mandatory for all the participants. Along
-                with this our captain has to get a signed statement from the
-                college having our details.
+              I understand that visiting the hostels instead of the one allotted to me is strictly prohibited and if found, I will be liable to pay a fine of INR 2500. 
+              </li>
+              <li>
+              I will have to keep the ID card given by the PR team at all times with me during my visit to Varchas, 2023 and if I lose it by some means then I will be liable to pay a fine of INR 500 for issuing a new ID card. 
+              </li>
+              <li>
+              I will bring original college identity proof along with a valid Aadhar card, which is mandatory for all the participants. Along with this, our captain has to get a signed statement from the college having our details.
+              </li>
+              <li>
+              I may also be required to leave the IIT campus if I do not adhere to the guidelines mentioned above
               </li>
             </ul>
-            If I am found breaking or not complying with any of the above
-            mentioned guidelines, I am bound for fine by the authority of the
-            organizing committee or any disciplinary action committee wants to
-            take against me, Varchas Winter 2022.
+            <br />
+            If I am found breaking or not complying with any of the above-mentioned guidelines,I am bound to fine/ team disqualification by the authority of the organizing committee or any disciplinary action the committee wants to take against me and also I am not allowed to enter informal ground, Varchas, 2023.
           </div>
           <div className="font-bold font-mono italic mb-2 underline">
+            <br />
             I have read and accept the terms :{" "}
             <input
               type="checkbox"

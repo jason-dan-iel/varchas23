@@ -20,7 +20,7 @@ export const theme = {
     backgroundImage: {
       // "hero-pattern": "url('/src/assets/herobg.png')",
       "hero-pattern": "url('/src/assets/1.jpeg')",
-      "gallery": "url('/bg-gallery.jpeg')",
+      "gallery": "url('/bg-gallery1.jpeg')",
     },
     fontFamily: {
       Teko: ['Teko', "sans-serif"],

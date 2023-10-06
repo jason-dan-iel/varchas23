@@ -13,10 +13,10 @@ const fixedInputClass =
 
 let categoryList = [];
 let teamList = [];
+const token = localStorage.getItem("Token");
 const TeamCreate = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    const token = localStorage.getItem("Token");
 
     if (!token) {
       const jsonData = { error: "Kindly Login First" };
@@ -76,20 +76,21 @@ const TeamCreate = () => {
 
   const createTeam = () => {
     const data_t = {category : selectedCategory,sport : selectedEvent, team : selectedTeamType};
-    console.log(data_t);
+    // console.log(data_t);
+    const token = localStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
       method: "post",
-      url: "https://api.varchas23.in/registration/createteam",
+      url: "https://api.varchas23.in/registration/createteam/",
       data: data_t,
     };
     axios(configuration)
       .then((result) => {
-        alert(result.data.success);
+        alert(result.data.message);
         naviage("/")
       })
       .catch((error) => {
-        alert(error.response.data.error);
+        alert(error.response.data.message);
       });
   }
 

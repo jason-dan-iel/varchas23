@@ -33,19 +33,20 @@ const TeamJoin = () => {
 
   const joinTeam = () => {
     const data_j = {teamId : joinState}
+    const token = localStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
       method: "post",
-      url: "https://server-sigma-neon.vercel.app/api/user/register",
+      url: "https://api.varchas23.in/account/jointeam/",
       data: data_j,
     };
     axios(configuration)
       .then((result) => {
-        alert(result.data.success);
+        alert(result.data.message);
         naviage("/")
       })
       .catch((error) => {
-        alert(error.response.data.error);
+        alert(error.response.data.message);
       });
     // console.log({teamId : joinState});
   };

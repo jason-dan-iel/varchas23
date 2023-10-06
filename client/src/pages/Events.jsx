@@ -34,7 +34,7 @@ const TeamCard = ({ index, title, icon, price, category, team, registerPath }) =
           <img
             src={icon}
             alt="web-development"
-            className=" object-contain w-24 h-24 hover:scale-[1.03] shadow rounded-md"
+            className=" object-contain max-w-32 max-h-32  hover:scale-[1.03] shadow rounded-md"
           />
 
           <h3 className="text-white text-[20px] text-center uppercase  font-Eczar ">

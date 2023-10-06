@@ -7,9 +7,7 @@ const VTeam = () => {
     const token = localStorage.getItem("Token");
 
     if (!token) {
-      const jsonData = { error: "Kindly Login First" };
-      alert(jsonData.error);
-      navigate("/login");
+      navigate("/");
     }
   });
   return <section className="h-screen w-screen"></section>;

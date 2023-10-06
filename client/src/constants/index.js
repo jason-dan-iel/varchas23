@@ -34,7 +34,7 @@ import {
   jason,
   harendra,} from "../assets/team"
 
-import { chess } from "../assets/eventsicons";
+import { chess } from "../assets";
 
 export const Teamdata = [
   {

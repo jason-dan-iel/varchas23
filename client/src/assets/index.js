@@ -19,9 +19,11 @@ import Squash from "./squash.png"
 import BGMI from "./bgmi.png"
 import Valo from "./valorant.png"
 import ClashRoyale from "./clashroyale.png"
+import chess from "./chess.png"
 
 
 export {
+    chess,
     backend,
     web,
     mobile,

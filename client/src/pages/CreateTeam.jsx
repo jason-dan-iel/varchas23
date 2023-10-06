@@ -6,6 +6,7 @@ import Comingsoon from "../components/comingsoon";
 import FormAction from "../components/formaction";
 import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
+import Input from "../components/input";
 import axios from "axios";
 
 const fixedInputClass =
@@ -13,7 +14,11 @@ const fixedInputClass =
 
 let categoryList = [];
 let teamList = [];
+let idList = [];
+let fieldsState = {}
+
 const token = localStorage.getItem("Token");
+
 const TeamCreate = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -25,14 +30,14 @@ const TeamCreate = () => {
   });
 
   const [selectedEvent, setSelectedEvent] = useState("");
-  const [size, setSize] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedTeamType, setSelectedTeamType] = useState([]);
+  const [iD, setID] = useState({});
 
   const eventChangeHandler = (event) => {
     const selectedEventValue = event.target.value;
     setSelectedEvent(selectedEventValue);
-    const token = localStorage.getItem("Token");
+    setSelectedTeamType([]);
 
     // Find the selected event to get its category and team types
     const selectedEventObj = eventOptions.find(
@@ -47,7 +52,6 @@ const TeamCreate = () => {
       } else {
         categoryList = [categoryValues];
       }
-      setSelectedTeamType([]);
 
       let teamValues = selectedEventObj.teamTypes;
       teamList = [];
@@ -55,9 +59,17 @@ const TeamCreate = () => {
       for (let i = 0; i < teamValues.length; i++) {
         teamList[i] = { value: teamValues[i], label: teamValues[i] };
       }
+
+      const team_id = selectedEventObj.team_id;
+      idList = team_id;
+      idList.forEach((field) => (fieldsState[field.id] = ""))
+      setID(fieldsState);
+      // console.log(idList);
     }
-    // console.log(teamList);
   };
+
+  const handleChange = (e) =>
+    setID({ ...iD, [e.target.id]: e.target.value });
 
   const categoryChangeHandler = (event) => {
     setSelectedCategory(event.target.value);
@@ -92,10 +104,11 @@ const TeamCreate = () => {
       sport: selectedEvent,
       teams: selectedTeamType,
       teamsize: list[selectedEvent - 1],
+      team_id : iD
     };
-    // console.log(data_t);
-    const token = localStorage.getItem("Token")
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    console.log(data_t);
+    const token = localStorage.getItem("Token");
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     const configuration = {
       method: "post",
       url: "https://api.varchas23.in/registration/createteam/",
@@ -172,6 +185,21 @@ const TeamCreate = () => {
                 />
               </div>
             }
+            {idList &&
+              idList.map((field, index) => (
+                <Input
+                  key={index}
+                  handleChange={handleChange}
+                  value={iD[field.id]}
+                  labelText={field.labelText}
+                  labelFor={field.labelFor}
+                  id={field.id}
+                  name={field.name}
+                  type={field.type}
+                  isRequired={field.isRequired}
+                  placeholder={field.placeholder}
+                />
+              ))}
             <FormAction handleSubmit={handleSubmit} text="Create Team" />
           </div>
         </form>

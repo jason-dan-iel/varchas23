@@ -63,7 +63,7 @@ const Hero = () => {
               Vigor
               <br className="sm:block hidden" />
               <p className="sm:hidden">|</p>
-              Valor
+              Valour
               <p className="sm:hidden">|</p>
               <br className="sm:block hidden" />
               Victory

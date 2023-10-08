@@ -12,7 +12,7 @@ const Hero = () => {
       <main>
         <div className="flex flex-col gap-2 justify-end items-end mx-4 px-4">
           <div>
-            <img src="../public/logo.png" className="z-15 w-[200px] h-[200px]" />
+            <img src="../logo.png" className="z-15 w-[200px] h-[200px]" />
             <p className="text-center uppercase font-nova_square text-[#09df9a] -mt-[14px]">3rd - 5th november</p>
           </div>
           <div className="flex flex-col mt-4 items-end justify-end">

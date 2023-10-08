@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { logo, menu, close } from "../assets";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const navigate = useNavigate();
-
+  const location = useLocation().pathname;
   const handleLogout = () => {
     // localStorage.removeItem("Token");
     localStorage.clear();
@@ -24,10 +24,10 @@ const Navbar = () => {
     >
       <div className="z-10 w-1/3">
         <ul
-          className="list-none hidden sm:flex sm:flex-col sm:left-0 justify-between
+          className={`list-none hidden sm:flex sm:flex-col sm:left-0 justify-between
            items-center text-[11px] md:text-[14px] lg:text-[16px] xl:text-[20px]  
            2xl:text-[25px] text-white ... font-nova_square
-           rounded-b-[15px] px-2 shadow-[#09FBD3] fixed capitalize h-[80vh] sm:gap-4"
+           rounded-b-[15px] px-2 shadow-[#09FBD3] fixed capitalize h-[80vh] sm:gap-4 ${location === '/' ? "sm:flex" : "sm:hover:opacity-100 sm:opacity-0"}`}
         >
           <li className="px-2 hover:text-[#09FBD3] border border-[#09FBD3] rounded-full hover:shadow-lg ">
             <NavLink to="/">

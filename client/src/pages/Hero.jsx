@@ -25,7 +25,7 @@ const Hero = () => {
             <div className={`${styles.heroSubText} font-semibold  text-white-100 text-[1.5rem] font-roboto uppercase mx-auto text-center flex flex-row gap-4 sm:gap-0`}>
               Vigor
               <p className="mx-1">|</p>
-              Valor
+              Valour
               <p className="mx-1">|</p>
               Victory
             </div>

@@ -15,25 +15,24 @@ const Payment = () => {
     }
   });
   useEffect(() => {
-    async () => {
-      try {
-        axios.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${localStorage.getItem("Token")}`;
-        const response = await axios.get("https://api.varchas23.in/payment", {
-          headers: { "Content-Type": "application/json" },
-        });
-
-        console.log(response.data.message);
-        console.log(response);
-      } catch (error) {
-        console.error(error);
-      }
+    const token = localStorage.getItem("Token")
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const configuration = {
+      method: "get",
+      url: "https://api.varchas23.in/payment",
     };
+    axios(configuration)
+      .then((result) => {
+        setData(result.data.message);
+        // alert(result.data.message);
+      })
+      .catch((error) => {
+        alert(error.response.data.message);
+      });
   }, []);
   return (
-    <main className="relative w-full h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
-      <div className="text-emerald-500 mt-7 text-[2.5rem] font-mono capitalize">
+    <main className="relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
+      <div className="text-emerald-500 text-[2.5rem] font-mono capitalize my-10">
         {Data}
       </div>
 

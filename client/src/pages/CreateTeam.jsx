@@ -6,6 +6,7 @@ import Comingsoon from "../components/comingsoon";
 import FormAction from "../components/formaction";
 import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
+import Input from "../components/input";
 import axios from "axios";
 
 const fixedInputClass =
@@ -13,11 +14,14 @@ const fixedInputClass =
 
 let categoryList = [];
 let teamList = [];
+let idList = [];
+let fieldsState = {}
+
 const token = localStorage.getItem("Token");
+
 const TeamCreate = () => {
   const navigate = useNavigate();
   useEffect(() => {
-
     if (!token) {
       const jsonData = { error: "Kindly Login First" };
       alert(jsonData.error);
@@ -28,11 +32,12 @@ const TeamCreate = () => {
   const [selectedEvent, setSelectedEvent] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedTeamType, setSelectedTeamType] = useState([]);
+  const [iD, setID] = useState({});
 
   const eventChangeHandler = (event) => {
     const selectedEventValue = event.target.value;
     setSelectedEvent(selectedEventValue);
-    const token = localStorage.getItem("Token");
+    setSelectedTeamType([]);
 
     // Find the selected event to get its category and team types
     const selectedEventObj = eventOptions.find(
@@ -42,43 +47,68 @@ const TeamCreate = () => {
       let categoryValues = selectedEventObj.category;
       categoryList = [];
       setSelectedCategory(categoryValues);
-      if(Array.isArray(categoryValues)){
-        categoryList=categoryValues;
-      }else{
+      if (Array.isArray(categoryValues)) {
+        categoryList = categoryValues;
+      } else {
         categoryList = [categoryValues];
       }
-      setSelectedTeamType([]);
-      
+
       let teamValues = selectedEventObj.teamTypes;
       teamList = [];
       setSelectedCategory(teamValues);
-      for (let i = 0; i<teamValues.length; i++){
-        teamList[i] = {value:teamValues[i], label:teamValues[i]};
+      for (let i = 0; i < teamValues.length; i++) {
+        teamList[i] = { value: teamValues[i], label: teamValues[i] };
       }
 
+      const team_id = selectedEventObj.team_id;
+      idList = team_id;
+      idList.forEach((field) => (fieldsState[field.id] = ""))
+      setID(fieldsState);
+      // console.log(idList);
     }
-    // console.log(teamList);
   };
+
+  const handleChange = (e) =>
+    setID({ ...iD, [e.target.id]: e.target.value });
 
   const categoryChangeHandler = (event) => {
     setSelectedCategory(event.target.value);
     setSelectedTeamType([]);
   };
 
-  const teamTypeChangeHandler = (event) => {
-    setSelectedTeamType(event.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     createTeam();
-  }
+  };
 
   const createTeam = () => {
-    const data_t = {category : selectedCategory,sport : selectedEvent, teams : selectedTeamType, teamsize : 100};
+    const list = [
+      "4",
+      "20",
+      "20",
+      "20",
+      "20",
+      "2",
+      "2",
+      "20",
+      "20",
+      "20",
+      "1",
+      "1",
+      "4",
+      "5",
+      "1",
+    ];
+    const data_t = {
+      category: selectedCategory,
+      sport: selectedEvent,
+      teams: selectedTeamType,
+      teamsize: list[selectedEvent - 1],
+      team_id : iD
+    };
     console.log(data_t);
-    const token = localStorage.getItem("Token")
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const token = localStorage.getItem("Token");
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     const configuration = {
       method: "post",
       url: "https://api.varchas23.in/registration/createteam/",
@@ -89,12 +119,12 @@ const TeamCreate = () => {
         alert(result.data.message);
         // console.log(result);
         // localStorage.setItem("team_token", result.data.team_token)
-        naviage("/payment")
+        navigate("/payment")
       })
       .catch((error) => {
         alert(error.response.data.message);
       });
-  }
+  };
 
   return (
     <section className="h-screen flex items-center justify-center">
@@ -118,7 +148,7 @@ const TeamCreate = () => {
                 ))}
               </select>
             </div>
-            {(
+            {
               <div>
                 <label>Select a Category:</label>
                 <select
@@ -134,25 +164,42 @@ const TeamCreate = () => {
                   ))}
                 </select>
               </div>
-            )}
-            {(
+            }
+            {
               <div>
                 <label>Select a Team Type:</label>
-                <Select 
-                closeMenuOnSelect={false}
-                defaultValue={"Select a Team Type"}
-                isMulti
-                options = {teamList}
-                value = {selectedTeamType.map((x) => ({
-                  value : x,
-                  label : x,
-                }))}
-                onChange={(selectedOptions) => {
-                  setSelectedTeamType(selectedOptions.map((option) => option.value));
-                }}
+                <Select
+                  closeMenuOnSelect={false}
+                  defaultValue={"Select a Team Type"}
+                  isMulti
+                  options={teamList}
+                  value={selectedTeamType.map((x) => ({
+                    value: x,
+                    label: x,
+                  }))}
+                  onChange={(selectedOptions) => {
+                    setSelectedTeamType(
+                      selectedOptions.map((option) => option.value)
+                    );
+                  }}
                 />
               </div>
-            )}
+            }
+            {idList &&
+              idList.map((field, index) => (
+                <Input
+                  key={index}
+                  handleChange={handleChange}
+                  value={iD[field.id]}
+                  labelText={field.labelText}
+                  labelFor={field.labelFor}
+                  id={field.id}
+                  name={field.name}
+                  type={field.type}
+                  isRequired={field.isRequired}
+                  placeholder={field.placeholder}
+                />
+              ))}
             <FormAction handleSubmit={handleSubmit} text="Create Team" />
           </div>
         </form>

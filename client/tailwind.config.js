@@ -28,6 +28,8 @@ export const theme = {
       Londrina_shadow: ['Londrina Shadow', "cursive"],
       Londrina_sketch: ['Londrina Sketch', "cursive"],
       Bungee_outline: ['Bungee Outline', 'cursive'],
+      nova_square: ['Nova Square', 'sans'],
+      roboto: ["Roboto Condensed", 'sans-serif'],
     },
   },
 };

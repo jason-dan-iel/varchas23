@@ -29,42 +29,42 @@ const Navbar = () => {
            2xl:text-[25px] text-white ... font-nova_square
            rounded-b-[15px] px-2 shadow-[#09FBD3] fixed capitalize h-[80vh] sm:gap-4 ${location === '/' ? "sm:flex" : "sm:hover:opacity-100 sm:opacity-0"}`}
         >
-          <li className="px-2 hover:text-[#09FBD3] border border-[#09FBD3] rounded-full hover:shadow-lg ">
+          <li className="px-2 hover:text-[#09FBD3] border border-[#09FBD3] rounded-full hover:shadow-lg  ">
             <NavLink to="/">
               <img src="/VLW.png" className="xl:h-16 xl:w-16 h-12 w-12" />
             </NavLink>
           </li>
-          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]  ">
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]">
             <NavLink to="/events">Events</NavLink>
           </li>
-          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/gallery">Gallery</NavLink>
           </li>
-          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/soch">Soch</NavLink>
           </li>
-          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/team">Our Team</NavLink>
           </li>
-          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/sponsors">Sponsors</NavLink>
           </li>
-          <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]  ">
+          <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]  ">
             <NavLink to="/aboutus">About us</NavLink>
           </li>
-          <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/create">Create Team</NavLink>
           </li>
           <li
-            className={`lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] `}
+            className={`lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] `}
           >
             <NavLink to="/join">Join Team</NavLink>
           </li>
-          <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/payment">Payment</NavLink>
           </li>
           <li
-            className={` px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]
+            className={` px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]
            `}
           >
             {token ? (
@@ -73,7 +73,7 @@ const Navbar = () => {
               <NavLink to="/login">LogIn</NavLink>
             )}
           </li>
-          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[200px] text-center border mx-auto border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center border mx-auto border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             {token ? (
               <p onClick={handleLogout}>Log Out</p>
             ) : (

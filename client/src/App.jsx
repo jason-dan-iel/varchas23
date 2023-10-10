@@ -46,7 +46,6 @@ const App = () => {
             <Route path="/join" element={<TeamJoin />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/view_team" element={<VTeam />} />
-
           </Routes>
         </Router>
       </div >

@@ -21,13 +21,13 @@ const token = localStorage.getItem("Token");
 
 const TeamCreate = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    if (!token) {
-      const jsonData = { error: "Kindly Login First" };
-      alert(jsonData.error);
-      navigate("/login");
-    }
-  });
+  // useEffect(() => {
+  //   if (!token) {
+  //     const jsonData = { error: "Kindly Login First" };
+  //     alert(jsonData.error);
+  //     navigate("/login");
+  //   }
+  // });
 
   const [selectedEvent, setSelectedEvent] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -139,6 +139,7 @@ const TeamCreate = () => {
                 value={selectedEvent}
                 onChange={eventChangeHandler}
                 className={fixedInputClass}
+                required
               >
                 <option value="">Select an Event</option>
                 {eventOptions.map((event) => (
@@ -155,6 +156,7 @@ const TeamCreate = () => {
                   value={selectedCategory}
                   onChange={categoryChangeHandler}
                   className={fixedInputClass}
+                  required
                 >
                   <option value="">Select a Category</option>
                   {categoryList.map((category) => (
@@ -172,6 +174,7 @@ const TeamCreate = () => {
                   closeMenuOnSelect={false}
                   defaultValue={"Select a Team Type"}
                   isMulti
+                  required
                   options={teamList}
                   value={selectedTeamType.map((x) => ({
                     value: x,

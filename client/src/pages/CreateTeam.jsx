@@ -21,13 +21,13 @@ const token = localStorage.getItem("Token");
 
 const TeamCreate = () => {
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (!token) {
-  //     const jsonData = { error: "Kindly Login First" };
-  //     alert(jsonData.error);
-  //     navigate("/login");
-  //   }
-  // });
+  useEffect(() => {
+    if (!token) {
+      const jsonData = { error: "Kindly Login First" };
+      alert(jsonData.error);
+      navigate("/login");
+    }
+  });
 
   const [selectedEvent, setSelectedEvent] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");

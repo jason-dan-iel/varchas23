@@ -17,6 +17,7 @@ import TeamCreate from "./pages/CreateTeam";
 import TeamJoin from "./pages/Join";
 import Payment from "./pages/Payment";
 import VTeam from "./pages/viewTeam";
+import Discount from "./pages/Discount";
 
 const App = () => {
 
@@ -46,10 +47,11 @@ const App = () => {
             <Route path="/join" element={<TeamJoin />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/view_team" element={<VTeam />} />
+
+            <Route path="/discount" element={<Discount />} />
           </Routes>
         </Router>
       </div >
-
     </div>
   );
 };

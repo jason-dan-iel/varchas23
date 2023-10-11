@@ -31,8 +31,9 @@ const VTeam = () => {
   }, []);
 
   return (
-    <div className="h-screen">
-      <div className="flex flex-col font-mono items-center justify-center mx-auto w-fit p-10 rounded-2xl max-h-screen shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10 text-white">
+    <div className="h-screen items-center flex w-screen flex-col justify-center
+    ">
+      <div className="flex flex-col font-mono items-center scroll-smooth mx-auto w-fit p-10 rounded-2xl  shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10 text-white max-h-[80%] overflow-auto">
         <div className=" text-[3rem]">Team Details</div>
         <div className="w-full"></div>
         <br />

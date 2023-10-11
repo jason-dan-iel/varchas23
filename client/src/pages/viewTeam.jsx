@@ -1,99 +1,88 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { events } from "../constants"
 import axios from "axios";
-import Comingsoon from "../components/comingsoon";
 
 const VTeam = () => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const token = localStorage.getItem("Token");
 
-    if (!token) {
-      navigate("/");
-    }
-  });
-  const [details, setDetails] = useState({});
-  const [team, setTeam] = useState([]);
+  const [teamDetails, setTeamDetails] = useState({});
 
   const token = localStorage.getItem("Token");
-
-  const getTeamProfile = () => {
-    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  const getTeamDetails = () => {
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
     const configuration = {
       method: "get",
       url: "https://api.varchas23.in/account/displayTeam/",
-    };
+    }
     axios(configuration)
       .then((result) => {
-        setDetails(result.data.team_data);
-        setTeam(result.data.profile.team_id);
-        naviage("/");
+        setTeamDetails(result.data);
+        console.log(teamDetails.team_data);
+        const a = teamDetails.team_data
+        console.log(Array.isArray(teamDetails.team_data));
+        console.log(Array.isArray(a));
       })
       .catch((error) => {
-        // alert(error.response.data.message);
+        console.log(error);
       });
-      // const data = {
-      //   team_token : "adfadfsa",
-      //   profile : {
-      //     college : "IIT JODHPUR",
-      //     phone : "7340293578" ,
-      //     team_id : [
-      //       {team_id : "evdfr", team_members : ["adsfadsf", "adsfadsf"]},
-      //       {team_id : "dasfadsf", team_members : ["asdfdasf", "adsfadsfa","adfadsfad"]},
-      //     ],
-      //     captain: true,
-      //   }
-      // }
-
-      // setDetails(data.profile);
-      // setTeam(data.profile.team_id);
-      console.log(team);
-  };
+  }
   useEffect(() => {
-    getTeamProfile();
+    getTeamDetails();
   }, []);
 
   return (
-    <section className="h-screen flex items-center">
-      <div className="">
-        <div className="flex flex-col items-center justify-center  w-fit p-10 rounded-2xl max-h-[70%] shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10">
-          <div className="section_subtitle px-3 py-2 font-bold text-[4.5rem] text-[#F66B0E]">
-            Team Data
-          </div>
-          <div className="flex gap-6 text-[1.5rem] items-center justify-center text-[#a5ba81] ">
-            <h3 className="text-[2rem]  text-right">College :</h3>{" "}
-            {details.college}{" "}
-          </div>
-          <div className="flex gap-6 text-[1.5rem] items-center justify-center text-[#a5ba81]">
-            <h3 className="text-[2rem] ">Phone : </h3> {details.phone}
-          </div>
-          <div className="flex gap-6 text-[1.5rem] items-center justify-center text-[#a5ba81]">
-            <h3 className="text-[2rem] ">Captain : </h3> {(details.captain)? "Y" : "N"}
-          </div>
-          <br />
-          <div className="flex gap-6 text-[1.5rem] items-center justify-center text-[#a5ba81] flex-col">
-            {team &&
-              team.map((e) => (
-                <div className="">
-                  <div className="">
-                    <h3 className="text-[2rem]  text-right">Team ID :
-                    {e.team_id}
-                    </h3>
+    <div className="h-screen">
+      <div className="flex flex-col font-mono items-center justify-center mx-auto w-fit p-10 rounded-2xl max-h-screen shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10 text-white">
+        <div className=" text-[3rem]">Team Details</div>
+        <div className="w-full"></div>
+        <br />
+        <div className="text-[1rem]">Registered Teams</div>
+        {teamDetails.team_data !== undefined && teamDetails.team_data.map((val, key) => (
+          <div key={key} className="w-full">
+            <div className="flex justify-between text-[1rem] gap-10">
+              <div className="">Team ID -{">"}</div>
+              <div className="">{val.team_id}</div>
+            </div>
+            <div className="flex justify-between text-[1rem] gap-10">
+              <div className="">Sport -{">"}</div>
+              {events.map((x, y) => {
+                console.log(x.title);
+                if (x.id === val.sport) {
+                  return <div key={y}>{x.title}</div>
+                }
+              })}
+            </div>
+            <div className="flex justify-between text-[1rem] gap-10">
+              <div className="">College -{">"}</div>
+              <div className="">{val.college}</div>
+            </div>
+            <div className="flex justify-between text-[1rem] gap-10">
+              <div className="">Captain -{">"}</div>
+              <div className="">{val.captain_username}</div>
+            </div>
+            <div className="flex justify-between text-[1rem] gap-10">
+              <div className="">Category -{">"}</div>
+              <div className="">{val.category}</div>
+            </div>
+            <div>Player Details</div>
+            <div className="flex justify-between text-[1rem] gap-10">
+              <br />
+              <div className="mx-auto justify-center text-start">
+                {val.players_info.map((val, key) => (
+                  <div key={key} className="flex flex-col justify-start mx-auto">
+                    <div className="">player - {key + 1}</div>
+                    <div className="">name -{">"} {val.name}</div>
+                    <div className="">email -{">"} {val.email}</div>
+                    <div className="">phone -{">"} {val.phone}</div>
                   </div>
-                  <ul className="list-decimal flex flex-col">
-                    {e.team_members && e.team_members.map((e)=>(
-                      <li className="">
-                        {e}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+            <br />
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

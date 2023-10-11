@@ -5,30 +5,32 @@ import { fadeIn, textVariant } from "../utils/motion";
 // eslint-disable-next-line react/prop-types
 const TeamCard = ({ index, para }) => {
   return (
-    <div className=" w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full p-[1px] rounded-[20px] shadow-lg hover:shadow-xl hover:shadow-[#00CCFF] shadow-[#00CCFF] cursor-pointer "
-      >
+    <div>
+      <div className=" w-full">
         <motion.div
-          options={{
-            max: 45,
-            scale: 1.1,
-            speed: 450,
-          }}
-          className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
+          variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+          className="w-full p-[1px] rounded-[20px] shadow-lg hover:shadow-xl hover:shadow-[#00CCFF] shadow-[#00CCFF] cursor-pointer "
         >
-          <p className="text-[#9fffef] xl:text-2xl text-center">{para}</p>
+          <motion.div
+            options={{
+              max: 45,
+              scale: 1.1,
+              speed: 450,
+            }}
+            className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
+          >
+            <p className="text-[#9fffef] xl:text-2xl text-center">{para}</p>
 
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
 const Soch = () => {
   return (
-    <main className="relative w-full h-full sm:h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
+    <main className="relative h-screen w-screen sm:h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
       <div className="text-emerald-500 mt-7 text-[100px] font-Londrina_sketch">S O C H</div>
       <div className="mt-5 flex flex-wrap gap-10 font-mono">
         <TeamCard

@@ -37,6 +37,9 @@ const Navbar = () => {
           <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]">
             <NavLink to="/events">Events</NavLink>
           </li>
+          <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3]">
+            <NavLink to="/discount">Discount</NavLink>
+          </li>
           <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg w-[125px] md:w-[200px] text-center mx-auto border border-[#09FBD3] rounded-lg shadow-[#09FBD3] shadow-md hover:shadow-[#09FBD3] ">
             <NavLink to="/gallery">Gallery</NavLink>
           </li>
@@ -105,6 +108,14 @@ const Navbar = () => {
               }}
             >
               <NavLink to="/events">Events</NavLink>
+            </li>
+            <li
+              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
+              onClick={() => {
+                setToggle(!toggle);
+              }}
+            >
+              <NavLink to="/discount">Discount</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}

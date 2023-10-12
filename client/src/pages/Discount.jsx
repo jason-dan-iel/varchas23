@@ -2,13 +2,13 @@ import { useState } from "react";
 const Discount = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="h-screen flex justify-end sm:justify-evenly items-center bg-black flex-col">
-      <div className="text-white flex flex-col gap-3 sm:gap-6">
-        <div className="uppercase flex justify-center text-[1.5rem] sm:text-[2.5rem] font-mono">
+    <div className="h-screen flex justify-center sm:justify-evenly items-center bg-black flex-col">
+      <div className="text-white flex flex-col gap-3 sm:gap-6  sm:h-[75%]">
+        <div className="uppercase flex justify-center text-[1.5rem] sm:text-[2.5rem] font-mono mt-12">
           {" "}
           contingent leader
         </div>
-        <div className="flex  sm:px-[10rem] sm:flex-row flex-col">
+        <div className="flex  sm:px-[10rem] sm:flex-row flex-col sm:h-full">
           <div className="flex sm:flex-col gap-2 justify-evenly sm:justify-center">
             <button
               className="bg-blue-400 text-center p-4 text-[0.75rem]"
@@ -27,10 +27,10 @@ const Discount = () => {
               Bulk Discount
             </button>
           </div>
-          <div className="border sm:p-4 m-4 sm:m-4 p-1 h-full overflow-auto items-center">
+          <div className="border sm:p-4 m-4 sm:m-4 p-1 max-h-[80%] sm:h-full overflow-auto items-center">
             {!toggle ? (
-              <div className="">
-                <div className="p-1 flex items-center justify-center font-serif text-[0.9rem] sm:text-[1.25rem]">
+              <div className="flex flex-col items-center justify-center">
+                <div className="p-1 font-serif text-[0.9rem] sm:text-[1.25rem]">
                   Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.
                   Simply bring 20 registrations to Varcahs'23 website along with
                   20 accomodations to Varchs'23 Sports fest.

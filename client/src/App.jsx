@@ -18,10 +18,22 @@ import TeamJoin from "./pages/Join";
 import Payment from "./pages/Payment";
 import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
+import Forgot from "./pages/Forgot";
 
 const App = () => {
 
   return (
+    // <BrowserRouter>
+    //   <div className='relative z-0 bg-primary'>
+    //     <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+    //       <Navbar />
+    //       <Home />
+    //       <StarsCanvas />
+    //     </div>
+    //     <About />
+    //   </div>
+    // </BrowserRouter>
+
     <div>
       <div className="relative z-0  bg-primary bg-cover bg-no-repeat bg-center">
         <Router>
@@ -49,6 +61,7 @@ const App = () => {
             <Route path="/view_team" element={<VTeam />} />
 
             <Route path="/discount" element={<Discount />} />
+            <Route path="/forgot" element={<Forgot />} />
           </Routes>
         </Router>
       </div >

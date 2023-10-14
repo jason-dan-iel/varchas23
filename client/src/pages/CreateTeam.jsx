@@ -62,7 +62,7 @@ const TeamCreate = () => {
 
       const team_id = selectedEventObj.team_id;
       idList = team_id;
-      idList.forEach((field) => (fieldsState[field.id] = ""))
+      idList && idList.forEach((field) => (fieldsState[field.id] = ""))
       setID(fieldsState);
       // console.log(idList);
     }
@@ -122,7 +122,8 @@ const TeamCreate = () => {
         navigate("/payment")
       })
       .catch((error) => {
-        alert(error.response.data.message);
+        console.log(error);
+        // alert(error.response.data.message);
       });
   };
 

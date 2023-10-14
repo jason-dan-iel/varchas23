@@ -7,11 +7,11 @@ import { slideIn } from "../utils/motion";
 const Hero = () => {
   return (
     <div
-      className={` flex-1 flex-col xl:flex-row h-screen right-0 bg-gallery bg-cover bg-no-repeat`}
+      className={` flex-1 flex-col xl:flex-row h-screen right-0 bg-gallery bg-cover bg-no-repeat `}
     >
       <main className="h-screen flex justify-center items-center sm:items-start">
         <div className="flex flex-col gap-2 justify-end items-end mx-4 px-4">
-          <div className="sm:block hidden">
+          <div className="sm:block hidden mt-12">
             <img src="../logo.png" className="z-15 w-[200px] h-[200px]" />
             <p className="text-center uppercase font-nova_square text-[#09df9a] -mt-[14px]">3rd - 5th november</p>
           </div>

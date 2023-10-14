@@ -1,9 +1,3 @@
-import { motion } from "framer-motion";
-import { EarthCanvas } from "../components/canvas";
-
-import { styles } from "../styles";
-import { slideIn } from "../utils/motion";
-
 const Hero = () => {
   return (
     <div

@@ -123,7 +123,12 @@ const TeamCreate = () => {
       })
       .catch((error) => {
         console.log(error);
-        // alert(error.response.data.message);
+        if (error.response && error.response.data && error.response.data.message){
+            alert(error.response.data.message);
+        }
+        if (error.response && error.response.data && error.response.data.detail){
+            alert(error.response.data.detail);
+        }
       });
   };
 

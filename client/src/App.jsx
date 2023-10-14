@@ -11,8 +11,6 @@ import StarsCanvas from "./components/canvas/Stars";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
-import Opening from "./components/Opening";
-import { useState } from "react";
 import TeamCreate from "./pages/CreateTeam";
 import TeamJoin from "./pages/Join";
 import Payment from "./pages/Payment";
@@ -23,16 +21,6 @@ import Forgot from "./pages/Forgot";
 const App = () => {
 
   return (
-    // <BrowserRouter>
-    //   <div className='relative z-0 bg-primary'>
-    //     <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-    //       <Navbar />
-    //       <Home />
-    //       <StarsCanvas />
-    //     </div>
-    //     <About />
-    //   </div>
-    // </BrowserRouter>
 
     <div>
       <div className="relative z-0  bg-primary bg-cover bg-no-repeat bg-center">

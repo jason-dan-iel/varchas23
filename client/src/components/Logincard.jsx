@@ -44,8 +44,13 @@ export default function Logincard() {
         location.reload();
       })
       .catch((error) => {
-        // console.log(error.response.data);
-        alert(error.response.data.message);
+        console.log(error);
+        if (error.response && error.response.data && error.response.data.message){
+            alert(error.response.data.message);
+        }
+        if (error.response && error.response.data && error.response.data.detail){
+            alert(error.response.data.detail);
+        }
       });
     // console.log(loginState);
   };

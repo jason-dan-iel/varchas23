@@ -27,7 +27,13 @@ const Payment = () => {
         // alert(result.data.message);
       })
       .catch((error) => {
-        alert(error.response.data.message);
+        console.log(error);
+        if (error.response && error.response.data && error.response.data.message){
+            alert(error.response.data.message);
+        }
+        if (error.response && error.response.data && error.response.data.detail){
+            alert(error.response.data.detail);
+        }
       });
   }, []);
   return (

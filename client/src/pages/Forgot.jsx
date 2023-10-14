@@ -12,10 +12,6 @@ const Forgot = () => {
   const [cnfpass, setCnfpass] = useState("");
   const navigate = useNavigate();
 
-  const handleeid = (e) => {
-    setEid(e.target.value);
-  };
-
   const handleEid = (e) => {
     setEid(e.target.value);
   };
@@ -54,6 +50,12 @@ const Forgot = () => {
       })
       .catch((error) => {
         console.log(error);
+        if (error.response && error.response.data && error.response.data.message){
+            alert(error.response.data.message);
+        }
+        if (error.response && error.response.data && error.response.data.detail){
+            alert(error.response.data.detail);
+        }
       });
   };
 
@@ -72,6 +74,12 @@ const Forgot = () => {
       })
       .catch((error) => {
         console.log(error);
+        if (error.response && error.response.data && error.response.data.message){
+            alert(error.response.data.message);
+        }
+        if (error.response && error.response.data && error.response.data.detail){
+            alert(error.response.data.detail);
+        }
       });
   };
 
@@ -97,7 +105,13 @@ const Forgot = () => {
         })
         .catch((error) => {
             console.log(error);
-        }); 
+            if (error.response && error.response.data && error.response.data.message){
+                alert(error.response.data.message);
+            }
+            if (error.response && error.response.data && error.response.data.detail){
+                alert(error.response.data.detail);
+            }
+          }); 
     }else{
         alert("Passwords don't match");
     }

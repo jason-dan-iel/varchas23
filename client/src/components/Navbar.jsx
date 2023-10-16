@@ -41,20 +41,12 @@ const Navbar = () => {
           <NavLink to="/discount">Discount</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          <NavLink to="/gallery">Gallery</NavLink>
-        </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
-          <NavLink to="/soch">Soch</NavLink>
-        </li>
-        <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/team">Our Team</NavLink>
         </li>
         <li className="px-2 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/sponsors">Sponsors</NavLink>
         </li>
-        <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125 ">
-          <NavLink to="/aboutus">About us</NavLink>
-        </li>
+
         {/* <NavLink to="/create">Create Team</NavLink> */}
         <li className="lg:px-2 px-1 hover:text-[#09FBD3] hover:shadow-lg hover:scale-125">
           <NavLink to="/create">Create Team</NavLink>
@@ -123,22 +115,6 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/gallery">Gallery</NavLink>
-            </li>
-            <li
-              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              <NavLink to="/soch">Soch</NavLink>
-            </li>
-            <li
-              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
               <NavLink to="/team">Our Team</NavLink>
             </li>
             <li
@@ -148,14 +124,6 @@ const Navbar = () => {
               }}
             >
               <NavLink to="/sponsors">Sponsors</NavLink>
-            </li>
-            <li
-              className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              <NavLink to="/aboutus">About us</NavLink>
             </li>
             <li
               className={`font-poppins font-medium cursor-pointer text-[16px] text-white hover:text-[#09fbd3] hover:shadow-lg hover:scale-125`}

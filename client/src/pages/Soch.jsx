@@ -30,7 +30,7 @@ const TeamCard = ({ index, para }) => {
 
 const Soch = () => {
   return (
-    <main className="relative h-screen w-screen sm:h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
+    <main className="relative h-[550px] w-screen  mx-auto max-w-7xl z-0 flex flex-col items-center justify-center">
       <div className="text-emerald-500 mt-7 text-[100px] font-Londrina_sketch">S O C H</div>
       <div className="mt-5 flex flex-wrap gap-10 font-mono">
         <TeamCard

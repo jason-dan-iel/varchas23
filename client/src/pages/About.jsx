@@ -25,8 +25,8 @@ const TeamCard = ({ index, para }) => {
 
 const About = () => {
   return (
-    <main className="relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
-      <div className="text-emerald-500 mt-12 text-[100px] font-Londrina_sketch uppercase">about us </div>
+    <main className="relative w-full h-full mx-auto mb-12  max-w-7xl z-0 flex flex-col items-center justify-center">
+      <div className="text-emerald-500 text-[75px] sm:text-[100px] font-Londrina_sketch uppercase">about us </div>
       <div className="mt-5 flex flex-wrap gap-10 font-mono">
         <TeamCard
           index={1}

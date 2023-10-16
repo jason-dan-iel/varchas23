@@ -28,8 +28,6 @@ export default function Logincard() {
   const authenticateUser = () => {
     const configuration = {
       method: "post",
-      // url: "https://server-sigma-neon.vercel.app/api/user/login",
-      // url : "http://localhost:3000/api/user/login",
       url : "https://api.varchas23.in/account/userlogin/",
       data: loginState,
     };
@@ -39,7 +37,6 @@ export default function Logincard() {
         alert(result.data.message);
         localStorage.setItem("Token", result.data.access_token);
         localStorage.setItem("refresh_Token", result.data.refresh_token);
-        // localStorage.setItem("team_token", result.data.team_token);
         navigate("/");
         location.reload();
       })

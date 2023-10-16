@@ -29,6 +29,7 @@ import {
   divyanshu,
   harsh,
   hima,
+  avinash,
   jatin,
   jesika,
   karan,
@@ -114,6 +115,13 @@ export const Teamdata = [
     Name: "Utkarsh Gupta",
     Designation: "Public Relations",
     instaLink: "https://instagram.com/utkarshgupta__07?igshid=OGQ5ZDc2ODk2ZA==",
+  },
+  {
+    title: "40",
+    imgPath: avinash,
+    Name: "Avinash Krishna",
+    Designation: "Public Relations",
+    instaLink: "https://www.instagram.com/avinash_krishna1/",
   },
   {
     title: "7",

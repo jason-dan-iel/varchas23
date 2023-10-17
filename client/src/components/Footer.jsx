@@ -1,6 +1,9 @@
 const Footer = () => {
   return (
-    <div className="w-screen text-white flex sm:flex-row flex-col sm:gap-4 justify-center sm:h-fit p-3 bg-[#1f163f]">
+    <div className="w-screen text-white flex sm:flex-row flex-col sm:gap-4 justify-evenly sm:h-fit p-3 bg-[#1f163f]">
+        <div className="hidden sm:flex  sm:w-1/4 justify-center items-center">
+            <img src="./logo1.png" alt="" className="h-1/2"/>
+        </div>
       <div className="flex flex-col sm:w-[25%] p-4 gap-1 font-serif">
         <p className="underline text-[1.5rem] font-mono">Varchas</p>
         <p>
@@ -23,7 +26,7 @@ const Footer = () => {
         <p>asdfads</p>
         <p>asdfads</p>
       </div> */}
-      <div className="flex flex-col sm:w-[20%] p-4">
+      <div className="flex flex-col sm:w-[20%] p-4 gap-2">
         <p className="text-[1.5rem] underline font-mono">Socials</p>
         <a href="https://www.instagram.com/varchas_iitj/" className="cursor-pointer" target="_blank">
           <svg
@@ -41,13 +44,13 @@ const Footer = () => {
               r="44.899"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stop-color="#fd5"></stop>
-              <stop offset=".328" stop-color="#ff543f"></stop>
-              <stop offset=".348" stop-color="#fc5245"></stop>
-              <stop offset=".504" stop-color="#e64771"></stop>
-              <stop offset=".643" stop-color="#d53e91"></stop>
-              <stop offset=".761" stop-color="#cc39a4"></stop>
-              <stop offset=".841" stop-color="#c837ab"></stop>
+              <stop offset="0" stopColor="#fd5"></stop>
+              <stop offset=".328" stopColor="#ff543f"></stop>
+              <stop offset=".348" stopColor="#fc5245"></stop>
+              <stop offset=".504" stopColor="#e64771"></stop>
+              <stop offset=".643" stopColor="#d53e91"></stop>
+              <stop offset=".761" stopColor="#cc39a4"></stop>
+              <stop offset=".841" stopColor="#c837ab"></stop>
             </radialGradient>
             <path
               fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
@@ -61,8 +64,8 @@ const Footer = () => {
               gradientTransform="matrix(1 0 0 .6663 0 1.849)"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stop-color="#4168c9"></stop>
-              <stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop>
+              <stop offset="0" stopColor="#4168c9"></stop>
+              <stop offset=".999" stopColor="#4168c9" stopOpacity="0"></stop>
             </radialGradient>
             <path
               fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"

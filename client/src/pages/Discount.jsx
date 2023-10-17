@@ -2,16 +2,16 @@ import { useState } from "react";
 const Discount = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="h-screen flex justify-center sm:justify-evenly items-center bg-black flex-col">
+    <div className="h-screen flex justify-center sm:justify-evenly items-center bg-black flex-col font-mono discount">
       <div className="text-white flex flex-col gap-3 sm:gap-6  sm:h-[75%]">
         <div className="uppercase flex justify-center text-[1.5rem] sm:text-[2.5rem] font-mono mt-12">
           {" "}
           contingent leader
         </div>
-        <div className="flex  sm:px-[10rem] sm:flex-row flex-col sm:h-full">
-          <div className="flex sm:flex-col gap-2 justify-evenly sm:justify-center">
+        <div className="flex  sm:px-4 sm:m-4 justify-evenly sm:flex-row flex-col sm:h-full">
+          <div className="flex sm:flex-col gap-4 justify-evenly sm:justify-normal p-2 sm:p-14">
             <button
-              className="bg-blue-400 text-center p-4 text-[0.75rem]"
+              className="bg-blue-400 text-center p-2 text-[1rem] hover:bg-blue-700"
               onClick={() => {
                 setToggle(false);
               }}
@@ -19,7 +19,7 @@ const Discount = () => {
               Contingent Leader
             </button>
             <button
-              className="bg-blue-400 text-center p-4 text-[0.75rem]"
+              className="bg-blue-400 text-center p-2 text-[1rem] hover:bg-blue-700 "
               onClick={() => {
                 setToggle(true);
               }}
@@ -27,16 +27,16 @@ const Discount = () => {
               Bulk Discount
             </button>
           </div>
-          <div className="border sm:p-4 m-4 sm:m-4 p-1 max-h-[80%] sm:h-full overflow-auto items-center">
+          <div className=" sm:p-4 m-4 sm:m-4 p-1 max-h-[80%] items-center justify-center sm:h-fit text-center sm:w-3/4">
             {!toggle ? (
               <div className="flex flex-col items-center justify-center">
-                <div className="p-1 font-serif text-[0.9rem] sm:text-[1.25rem]">
+                <div className="p-2 font-serif text-[0.9rem] sm:text-[1.5rem]">
                   Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.
                   Simply bring 20 registrations to Varcahs'23 website along with
                   20 accomodations to Varchs'23 Sports fest.
                 </div>
                 <div className="">
-                  <ul className="list-disc text-left px-5 ">
+                  <ul className="list-disc text-left px-5 flex flex-col gap-2 sm:gap-4 text-[0.8rem] sm:text-[1.1rem]">
                     <li>
                       {" "}
                       Deliverables: Contingent leaders get FREE Accommodation,
@@ -64,7 +64,7 @@ const Discount = () => {
               </div>
             ) : (
               <div className="">
-                <ul className="list-disc text-left px-5 ">
+                <ul className="list-disc text-left px-5 flex flex-col gap-2 sm:gap-4 text-[0.8rem] sm:text-[1.1rem]">
                   <li>
                     {" "}
                     For contingent size of 40+, bulk discount of Rs.50 will be

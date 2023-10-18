@@ -4,33 +4,27 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const TeamCard = ({ index, para }) => {
   return (
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full p-[1px] rounded-[20px] shadow-lg hover:shadow-xl hover:shadow-[#00CCFF] shadow-[#00CCFF] cursor-pointer"
+    <div
+      className="w-3/4 mx-auto p-[1px] rounded-[20px] shadow-lg shadow-[#00CCFF]"
     >
-      <motion.div
-        options={{
-          max: 45,
-          scale: 1.1,
-          speed: 450,
-        }}
+      <div
         className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
       >
-        <p className="text-[#9fffef] text-xl xl:text-2xl text-center">{para}</p>
+        <p className="text-[#9fffef] xl:text-2xl sm:text-center">{para}</p>
 
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
 const About = () => {
   return (
     <main className="relative w-full h-full mx-auto mb-12  max-w-7xl z-0 flex flex-col items-center justify-center">
-      <div className="text-emerald-500 text-[75px] sm:text-[100px] font-Londrina_sketch uppercase">about us </div>
-      <div className="mt-5 flex flex-wrap gap-10 font-mono">
+      <div className="text-emerald-500 text-[60px] sm:text-[100px] font-Eczar uppercase">about us </div>
+      <div className="mt-5 flex flex-wrap gap-10 font-mono uppercase">
         <TeamCard
           index={1}
-          para={"Varchas is the annual sports fest of IIT Jodhpur. Being the largest sports fest of North-West India, Varchas celebrates spirit of sportmanship and serves as platform to showcase the countless hours of perspiration put in by teams to achieve excellence in their sport. Since it's inception in 2011, the grandeur of Varchas has spread far and wide across the best colleges of India."}
+          para={"Varchas stands as the annual sports festival of IIT Jodhpur and holds the distinction of being the largest sporting event in North-West India. Varchas is a celebration of the spirit of sportsmanship, offering a prominent platform to showcase the dedication and hard work invested by various teams to attain excellence in their respective sporting disciplines. Since its inception in 2011, the prestige and grandeur of Varchas has extended far and wide, gaining recognition among the most esteemed colleges and universities in India"}
         />
         <TeamCard
           index={1}

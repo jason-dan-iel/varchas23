@@ -55,6 +55,8 @@ import {
   harendra,
   akarsh,
   navneet,
+  harshita,
+  ritu,
 } from "../assets/team";
 
 import { chess } from "../assets";
@@ -157,6 +159,20 @@ export const Teamdata = [
     Name: "Pratap",
     Designation: "Sports",
     instaLink: "",
+  },
+  {
+    title: "100",
+    imgPath: harshita,
+    Name: "Harshita Sehra",
+    Designation: "Design & Creativity",
+    instaLink: "https://instagram.com/harshita_sehra?igshid=OGQ5ZDc2ODk2ZA==",
+  },
+  {
+    title: "101",
+    imgPath: ritu,
+    Name: "Ritu Badgoti",
+    Designation: "Design & Creativity",
+    instaLink: "https://instagram.com/__ritu.3?igshid=OGQ5ZDc2ODk2ZA==",
   },
   {
     title: "6",
@@ -319,6 +335,8 @@ const events = [
     category: " M / W",
     team: "solo",
     registerPath: "/create",
+    detailsPath : "/athletics",
+    rulebook : "https://www.canva.com/design/DAFwNvDQjw0/5g9BG60T6QKiz8GzfbBOzg/view?utm_content=DAFwNvDQjw0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "2",
@@ -327,6 +345,8 @@ const events = [
     category: " M / W",
     team: "solo",
     registerPath: "/create",
+    detailsPath : "/badminton",
+    rulebook : "https://www.canva.com/design/DAFwNS9hnVc/WWTBdlP0w7ynDKjZGB3YlA/view?utm_content=DAFwNS9hnVc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "3",
@@ -335,6 +355,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/basketball",
+    rulebook : "https://www.canva.com/design/DAFwNlu02xQ/Ba6SbquTIelw9KBQtRVhRA/view?utm_content=DAFwNlu02xQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "4",
@@ -343,6 +365,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/cricket",
+    rulebook : "https://www.canva.com/design/DAFwNcg45lM/UumJx7LHSimuECQYe6qznA/view?utm_content=DAFwNcg45lM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "5",
@@ -351,6 +375,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/football",
+    rulebook : "https://www.canva.com/design/DAFwPHWol04/i-KCuAYW6PyybKXeShqrNA/view?utm_content=DAFwPHWol04&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "6",
@@ -359,6 +385,8 @@ const events = [
     category: " M / W",
     team: "Doubles / Mixed",
     registerPath: "/create",
+    detailsPath : "/table-tennis",
+    rulebook : "https://www.canva.com/design/DAFwOL5vgac/LG3YCOM_jtFJMTpRK4WNQg/view?utm_content=DAFwOL5vgac&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "7",
@@ -367,6 +395,8 @@ const events = [
     category: " M / W",
     team: "doubles / mixed",
     registerPath: "/create",
+    detailsPath : "/lawn-tennis",
+    rulebook : "https://www.canva.com/design/DAFwN9PrY0M/DjVxBpukTD-iKoNh54tnJA/view?utm_content=DAFwN9PrY0M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "8",
@@ -375,6 +405,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/volleeyball",
+    rulebook : "https://www.canva.com/design/DAFwN3YUlYY/G8f8edC8rzm3wN5x54215A/view?utm_content=DAFwN3YUlYY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "9",
@@ -383,6 +415,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/kabaddi",
+    rulebook : "https://www.canva.com/design/DAFwNZ5Wihs/fxsMfxLEanzI_AS7ficNsQ/view?utm_content=DAFwNZ5Wihs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "10",
@@ -391,6 +425,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/hockey",
+    rulebook : "https://www.canva.com/design/DAFwNXk87gY/vb2mmez9SfX9xUQVoxD2vQ/view?utm_content=DAFwNXk87gY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "11",
@@ -399,6 +435,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/squash",
+    rulebook : "https://www.canva.com/design/DAFwOGYgma0/OuHL_yT5ruFWAyvmGS1R4w/view?utm_content=DAFwOGYgma0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "12",
@@ -407,6 +445,8 @@ const events = [
     category: " M / W",
     team: "team",
     registerPath: "/create",
+    detailsPath : "/chess",
+    rulebook : "https://www.canva.com/design/DAFwNTLw2k4/lAM5K2aQMkCls_lhpTCLZQ/view?utm_content=DAFwNTLw2k4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "13",
@@ -421,6 +461,8 @@ const events = [
       { value: "id3", label: "id3" },
       { value: "id4", label: "id4" },
     ],
+    detailsPath : "/esports/bgmi",
+    rulebook : "https://www.canva.com/design/DAFwOIZ0OSw/82BAJQT_oTNrsl_X94-Kgg/view?utm_content=DAFwOIZ0OSw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "14",
@@ -436,6 +478,8 @@ const events = [
       { value: "id4", label: "id4" },
       { value: "id5", label: "id5" },
     ],
+    detailsPath : "/esports/valorant",
+    rulebook : "https://www.canva.com/design/DAFwOb-QXdU/LeIzgc7nD_JQHUFfK2EL6Q/view?utm_content=DAFwOb-QXdU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
   {
     id: "15",
@@ -445,6 +489,8 @@ const events = [
     team: "team",
     registerPath: "/create",
     team_id: [{ value: "id1", label: "id1" }],
+    detailsPath : "/esports/clash-royale",
+    rulebook : "https://www.canva.com/design/DAFwO-vD7pI/YrLYWlrlbGiwEIOAMev8XQ/view?utm_content=DAFwO-vD7pI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
   },
 ];
 

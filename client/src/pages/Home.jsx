@@ -8,8 +8,14 @@ const Home = () => {
     return (
         <main className="h-full w-screen">
             <Hero />
+            <div className="bg1">
+
             <Soch />
+            </div>
+            <div className="bg2">
+
             <About />
+            </div>
             <Gallery />
             <Footer />
         </main>

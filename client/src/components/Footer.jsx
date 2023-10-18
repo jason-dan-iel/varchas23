@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="w-screen text-white flex sm:flex-row flex-col sm:gap-4 justify-evenly sm:h-fit p-3 bg-[#1f163f]">
+    <div className="w-screen text-white flex sm:flex-row flex-col sm:gap-4 justify-evenly sm:h-fit p-3 footer-grad">
         <div className="hidden sm:flex  sm:w-1/4 justify-center items-center">
             <img src="./logo1.png" alt="" className="h-1/2"/>
         </div>

@@ -9,23 +9,23 @@ const Discount = () => {
           contingent leader
         </div>
         <div className="flex  sm:px-4 sm:m-4 justify-evenly sm:flex-row flex-col sm:h-full">
-          <div className="flex sm:flex-col gap-4 justify-evenly sm:justify-normal p-2 sm:p-14">
-            <button
-              className="bg-blue-400 text-center p-2 text-[1rem] hover:bg-blue-700"
+          <div className="flex sm:flex-col gap-4 justify-evenly sm:justify-normal p-2 sm:p-14 cont">
+            <a
+              className=" text-center before:text-[1rem] cursor-pointer"
               onClick={() => {
                 setToggle(false);
               }}
             >
               Contingent Leader
-            </button>
-            <button
-              className="bg-blue-400 text-center p-2 text-[1rem] hover:bg-blue-700 "
+            </a>
+            <a
+              className="text-center text-[1rem] cursor-pointer"
               onClick={() => {
                 setToggle(true);
               }}
             >
               Bulk Discount
-            </button>
+            </a>
           </div>
           <div className=" sm:p-4 m-4 sm:m-4 p-1 max-h-[80%] items-center justify-center sm:h-fit text-center sm:w-3/4">
             {!toggle ? (

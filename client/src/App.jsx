@@ -1,9 +1,6 @@
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
 import Events from "./pages/Events";
-import Gallery from "./pages/Gallery";
 import Sponsors from "./pages/Sponsors";
-import Soch from "./pages/Soch";
 import Team from "./pages/Team";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -17,6 +14,7 @@ import Payment from "./pages/Payment";
 import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
+import Dcricket from "./sports/c";
 
 const App = () => {
 
@@ -46,6 +44,20 @@ const App = () => {
             <Route path="/view_team" element={<VTeam />} />
 
             <Route path="/discount" element={<Discount />} />
+            <Route path="/forgot" element={<Forgot />} />
+
+            <Route path="/cricket" element={<Dcricket />} />
+            <Route path="/hockey" element={<Forgot />} />
+            <Route path="/kabaddi" element={<Forgot />} />
+            <Route path="/table-tennis" element={<Forgot />} />
+            <Route path="/lawn-tennis" element={<Forgot />} />
+            <Route path="/basketball" element={<Forgot />} />
+            <Route path="/volleyball" element={<Forgot />} />
+            <Route path="/esports/bgmi" element={<Forgot />} />
+            <Route path="/esports/valorant" element={<Forgot />} />
+            <Route path="/esport/clash-royale" element={<Forgot />} />
+            <Route path="/chess" element={<Forgot />} />
+            <Route path="/forgot" element={<Forgot />} />
             <Route path="/forgot" element={<Forgot />} />
           </Routes>
         </Router>

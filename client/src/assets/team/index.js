@@ -33,9 +33,13 @@ import aryan from "./aryan.png";
 import harendra from "./hp.png"
 import avinash from "./avinash.jpeg"
 import navneet from "./navneet.jpg"
+import harshita from "./harshita.jpeg"
+import ritu from "./ritu.jpg"
 
 export {
   harendra,
+  harshita,
+  ritu,
   avinash,
   navneet,
   khetan,

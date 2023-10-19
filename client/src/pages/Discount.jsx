@@ -67,21 +67,31 @@ const Discount = () => {
                 <ul className="list-disc text-left px-5 flex flex-col gap-2 sm:gap-4 text-[0.8rem] sm:text-[1.1rem]">
                   <li>
                     {" "}
-                    For contingent size of 40+, bulk discount of Rs.50 will be
-                    provided for each accommodation. *Must have atleast 40
+                    For contingent size of 40+, bulk discount of Rs.49 will be
+                    provided for each accommodation. 
+                    <p className="inline italic font-serif">
+                    *Must have atleast 40
                     people opting accommodation{" "}
+                    </p>
                   </li>
                   <li>
                     {" "}
-                    For contingent size of 50+, bulk discount of Rs.150 will be
-                    provided for each accommodation. *Must have atleast 50
+                    For contingent size of 50+, bulk discount of Rs.149 will be
+                    provided for each accommodation. 
+                    <p className="inline italic font-serif">
+                      *Must have atleast 50
                     people opting accommodation{" "}
+                      </p>
                   </li>
                   <li>
                     {" "}
-                    For contingent size of 80+, bulk discount of Rs.200 will be
-                    provided for each accommodation. *Must have atleast 80
+                    For contingent size of 80+, bulk discount of Rs.199 will be
+                    provided for each accommodation. 
+                    <p className="inline italic font-serif">
+
+                    *Must have atleast 80
                     people opting accommodation{" "}
+                    </p>
                   </li>
                   <li>
                     {" "}

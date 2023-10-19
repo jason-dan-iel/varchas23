@@ -78,6 +78,10 @@
     rgba(60, 51, 80, 0) 100%
   );
 }
+.he{
+  letter-spacing: 0.1em;
+  font-size: 6vh;
+}
 .bg2{
   /* background-image: linear-gradient(to left bottom, #004346, #006d6d, #009a92, #00cab4, #09fbd3); */
   background: #09fbd3;

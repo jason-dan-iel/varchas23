@@ -20,9 +20,11 @@ import BGMI from "./bgmi.png"
 import Valo from "./valorant.png"
 import ClashRoyale from "./clashroyale.png"
 import chess from "./chess.png"
+import CB from "./CB.svg"
 
 
 export {
+    CB,
     chess,
     backend,
     web,

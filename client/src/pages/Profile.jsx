@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 
 export default function Profiles() {
   const [details, setDetails] = useState({});
+  const navigate = useNavigate();
 
-  const token = localStorage.getItem("Token");
+  const token = sessionStorage.getItem("Token");
 
   const getuserProfile = async () => {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -27,7 +28,9 @@ export default function Profiles() {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            alert(error.response.data.detail);
+            // alert(error.response.data.detail);
+            sessionStorage.clear();
+            navigate("/login")
         }
       });
   };

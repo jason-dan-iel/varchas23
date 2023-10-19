@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { events } from "../constants"
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const VTeam = () => {
 
   const [teamDetails, setTeamDetails] = useState({});
+  const navigate = useNavigate();
 
-  const token = localStorage.getItem("Token");
+  const token = sessionStorage.getItem("Token");
   const getTeamDetails = () => {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
     const configuration = {
@@ -28,7 +30,9 @@ const VTeam = () => {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            alert(error.response.data.detail);
+            // alert(error.response.data.detail);
+            sessionStorage.clear();
+            navigate("/login")
         }
       });
   }

@@ -6,7 +6,7 @@ const Payment = () => {
   const navigate = useNavigate();
   const [Data, setData] = useState("");
   useEffect(() => {
-    const token = localStorage.getItem("Token");
+    const token = sessionStorage.getItem("Token");
 
     if (!token) {
       const jsonData = { error: "Kindly Login First" };
@@ -15,7 +15,7 @@ const Payment = () => {
     }
   });
   useEffect(() => {
-    const token = localStorage.getItem("Token")
+    const token = sessionStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
       method: "get",
@@ -32,7 +32,9 @@ const Payment = () => {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            alert(error.response.data.detail);
+            // alert(error.response.data.detail);
+            sessionStorage.clear();
+            navigate("/login");
         }
       });
   }, []);

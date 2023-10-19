@@ -9,13 +9,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation().pathname;
   const handleLogout = () => {
-    localStorage.clear();
+    sessionStorage.clear();
     navigate("/");
     location.reload();
   };
 
-  const token = localStorage.getItem("Token");
-  const team_token = localStorage.getItem("team_token");
+  const token = sessionStorage.getItem("Token");
+  const team_token = sessionStorage.getItem("team_token");
   return (
     <nav
       id="NAV"

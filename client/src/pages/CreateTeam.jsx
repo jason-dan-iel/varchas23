@@ -21,7 +21,7 @@ let fieldsState = {}
 const TeamCreate = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    const token = localStorage.getItem("Token");
+    const token = sessionStorage.getItem("Token");
     if (!token) {
       const jsonData = { error: "Kindly Login First" };
       alert(jsonData.error);
@@ -107,7 +107,7 @@ const TeamCreate = () => {
       team_id : iD
     };
     console.log(data_t);
-    const token = localStorage.getItem("Token");
+    const token = sessionStorage.getItem("Token");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     const configuration = {
       method: "post",
@@ -118,7 +118,7 @@ const TeamCreate = () => {
       .then((result) => {
         alert(result.data.message);
         // console.log(result);
-        // localStorage.setItem("team_token", result.data.team_token)
+        // sessionStorage.setItem("team_token", result.data.team_token)
         navigate("/payment")
       })
       .catch((error) => {
@@ -127,7 +127,9 @@ const TeamCreate = () => {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            alert(error.response.data.detail);
+            // alert(error.response.data.detail);
+            sessionStorage.clear();
+            navigate("/login")
         }
       });
   };

@@ -10,10 +10,10 @@ import Comingsoon from "../components/comingsoon";
 const TeamJoin = () => {
   const navigate = useNavigate();
   const [joinState, setJoinState] = useState("");
-  const token = localStorage.getItem("Token");
+  const token = sessionStorage.getItem("Token");
 
   useEffect(() => {
-    const token = localStorage.getItem("Token");
+    const token = sessionStorage.getItem("Token");
 
     if (!token) {
       const jsonData = { error: "Kindly Login First" };
@@ -33,7 +33,7 @@ const TeamJoin = () => {
 
   const joinTeam = () => {
     const data_j = {teamId : joinState}
-    const token = localStorage.getItem("Token")
+    const token = sessionStorage.getItem("Token")
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const configuration = {
       method: "post",
@@ -43,7 +43,7 @@ const TeamJoin = () => {
     axios(configuration)
       .then((result) => {
         alert(result.data.message);
-        // localStorage.setItem("team_token", result.data.team_token);
+        // sessionStorage.setItem("team_token", result.data.team_token);
         naviage("/");
       })
       .catch((error) => {
@@ -52,7 +52,9 @@ const TeamJoin = () => {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            alert(error.response.data.detail);
+            // alert(error.response.data.detail);
+            sessionStorage.clear();
+            navigate("/login")
         }
       });
     // console.log({teamId : joinState});

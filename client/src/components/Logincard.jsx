@@ -35,8 +35,8 @@ export default function Logincard() {
     axios(configuration)
       .then((result) => {
         alert(result.data.message);
-        localStorage.setItem("Token", result.data.access_token);
-        localStorage.setItem("refresh_Token", result.data.refresh_token);
+        sessionStorage.setItem("Token", result.data.access_token);
+        sessionStorage.setItem("refresh_Token", result.data.refresh_token);
         navigate("/");
         location.reload();
       })
@@ -47,6 +47,7 @@ export default function Logincard() {
         }
         if (error.response && error.response.data && error.response.data.detail){
             alert(error.response.data.detail);
+
         }
       });
     // console.log(loginState);

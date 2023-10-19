@@ -84,7 +84,7 @@ const TeamCreate = () => {
   const createTeam = () => {
     const list = [
       "4",
-      "20",
+      "4",
       "20",
       "20",
       "20",

@@ -21,10 +21,21 @@ import Valo from "./valorant.png"
 import ClashRoyale from "./clashroyale.png"
 import chess from "./chess.png"
 import CB from "./CB.svg"
+import cosco from "./cosco.png"
+import redbull from "./redbull.svg"
+import OIL from "./OIL.svg"
+import yonex from "./yonex.svg"
+import sbi from "./sbi.svg"
+
 
 
 export {
     CB,
+    sbi,
+    yonex,
+    OIL,
+    cosco,
+    redbull,
     chess,
     backend,
     web,

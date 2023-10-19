@@ -1,4 +1,4 @@
-import { CB } from "../assets";
+import { CB, OIL, cosco, redbull, sbi, yonex } from "../assets";
 
 const Sponsors = () => {
   return (
@@ -7,11 +7,41 @@ const Sponsors = () => {
       <div className=" text-emerald-400 text-center uppercase my-12 he">
         Past Sponsors
       </div>
-      <div className="">
-        <span className="w-full flex items-center justify-center">
+      <div className="grid sm:grid-cols-3 gap-8 grid-cols-1">
+        <span className="w-3/4 mx-auto sm:w-full flex items-center justify-center">
+          <span className="sr-only">Canara Bank</span>
+          <div aria-hidden="true " className="bg-white">
+            <img src={OIL} />
+          </div>
+        </span>
+        <span className="w-3/4 mx-auto sm:w-full flex items-center justify-center">
           <span className="sr-only">Canara Bank</span>
           <div aria-hidden="true">
             <img src={CB} />
+          </div>
+        </span>
+        <span className="w-3/4 mx-auto sm:w-full flex items-center justify-center">
+          <span className="sr-only">Canara Bank</span>
+          <div aria-hidden="true">
+            <img src={redbull} />
+          </div>
+        </span>
+        <span className="w-3/4 mx-auto sm:w-full flex items-center justify-center">
+          <span className="sr-only">Canara Bank</span>
+          <div aria-hidden="true">
+            <img src={yonex} />
+          </div>
+        </span>
+        <span className="w-3/4 mx-auto sm:w-full flex items-center justify-center">
+          <span className="sr-only">Canara Bank</span>
+          <div aria-hidden="true">
+            <img src={sbi} />
+          </div>
+        </span>
+        <span className="w-3/4 mx-auto sm:w-full flex items-center justify-center">
+          <span className="sr-only">Canara Bank</span>
+          <div aria-hidden="true">
+            <img src={cosco} />
           </div>
         </span>
       </div>

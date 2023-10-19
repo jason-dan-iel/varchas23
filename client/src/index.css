@@ -52,13 +52,19 @@
 
 .footer-grad{
   /* background-image: linear-gradient(to left bottom, #004346, #006d6d, #009a92, #00cab4, #09fbd3); */
-  background: #09fbd3;
+  /* background: #09fbd3;
   background: linear-gradient(-90deg, #09fbd3 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
     #3f017ea0 0%,
     rgba(60, 51, 80, 0) 100%
-  );
+  ); */
+  background: rgba(37, 0, 91, 0.25);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.2px);
+-webkit-backdrop-filter: blur(8.2px);
+border: 1px solid rgba(37, 0, 91, 0.1);
 }
 .cont>a{
   background-color: #2673b2;
@@ -80,7 +86,7 @@
 }
 .he{
   letter-spacing: 0.1em;
-  font-size: 6vh;
+  font-size: 4vh;
 }
 .bg2{
   /* background-image: linear-gradient(to left bottom, #004346, #006d6d, #009a92, #00cab4, #09fbd3); */
@@ -92,17 +98,21 @@
     rgba(60, 51, 80, 0) 100%
   );
 }
+.glass {
+  background: rgba(0, 17, 91, 0.25);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.2px);
+-webkit-backdrop-filter: blur(8.2px);
+border: 1px solid rgba(0, 17, 91, 0.1);
+}
 
 .navbar .active {
   color: #67d4df;
-  /* padding-bottom: 5px; */
-  /* border-bottom: 2px solid #67d4df; */
-  background-color: #98a09e53;
-  padding:  8px 16px;
-  border-radius: 3px;
-
-
+  padding-bottom: 5px;
+  border-bottom: 2px solid #67d4df;
 }
+
 
 .violet-gradient {
   background: #09fbd3;

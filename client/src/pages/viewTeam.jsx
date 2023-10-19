@@ -19,6 +19,7 @@ const VTeam = () => {
     axios(configuration)
       .then((result) => {
         setTeamDetails(result.data);
+        console.log(result.data)
         console.log(teamDetails.team_data);
         const a = teamDetails.team_data
         console.log(Array.isArray(teamDetails.team_data));
@@ -79,7 +80,7 @@ const VTeam = () => {
             <div className="flex justify-between text-[1rem] gap-10">
               <br />
               <div className="mx-auto justify-center text-start">
-                {val.players_info.map((val, key) => (
+              {val.sport < 13 && val.players_info.map((val, key) => (
                   <div key={key} className="flex flex-col justify-start mx-auto">
                     <div className="">player - {key + 1}</div>
                     <div className="">name -{">"} {val.name}</div>
@@ -87,6 +88,15 @@ const VTeam = () => {
                     <div className="">phone -{">"} {val.phone}</div>
                   </div>
                 ))}
+                  {val.sport >= 13 && val.players_info.map((player, index) => (
+                    <div key={index} className="flex flex-col justify-start mx-auto">
+                      {Object.entries(player).map(([key, value]) => (
+                        <div key={key}>
+                          {key} -{">"} {value}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
               </div>
             </div>
             <br />

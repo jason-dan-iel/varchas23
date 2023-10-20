@@ -24,9 +24,7 @@ const Navbar = () => {
       <ul
         className="px-4 list-none hidden sm:flex w-full justify-between items-center 
       text-[11px] md:text-[14px] lg:text-[16px] xl:text-[18px]  2xl:text-[20px] text-white 
-      glass
-      
-      font-mono fixed uppercase
+      glass font-nova_square fixed uppercase
       "
       >
         <li className="p-1  mt-2 hover:text-[#09FBD3] ">

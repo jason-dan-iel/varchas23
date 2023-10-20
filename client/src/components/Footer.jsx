@@ -4,14 +4,14 @@ const Footer = () => {
         <div className="hidden sm:flex  sm:w-1/4 justify-center items-center">
             <img src="./logo1.png" alt="" className="h-1/2"/>
         </div>
-      <div className="flex flex-col sm:w-[25%] p-4 gap-1 font-serif">
-        <p className="underline text-[1.5rem] font-mono">Varchas</p>
+      <div className="flex flex-col sm:w-[25%] p-4 gap-1 font-nova_square uppercase">
+        <p className="underline text-[1.5rem]">Varchas</p>
         <p>
           Indian Institute of Technology Jodhpur NH 62 Nagaur Road Karwar
           342030, Jodhpur District
         </p>
         <p>Phone:-</p>
-        <ul className="pl-8 list-disc font-mono">
+        <ul className="pl-8 list-disc">
           <li>+91 7906458269 Harsh</li>
           <li>+91 8957247407 Utkarsh</li>
           <li>+91 8433106251 Shivangi</li>
@@ -26,8 +26,8 @@ const Footer = () => {
         <p>asdfads</p>
         <p>asdfads</p>
       </div> */}
-      <div className="flex flex-col sm:w-[20%] p-4 gap-2">
-        <p className="text-[1.5rem] underline font-mono">Socials</p>
+      <div className="flex flex-col sm:w-[20%] p-4 gap-2 font-nova_square uppercase">
+        <p className="text-[1.5rem] underline">Socials</p>
         <a href="https://www.instagram.com/varchas_iitj/" className="cursor-pointer" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"

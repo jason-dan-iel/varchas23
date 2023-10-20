@@ -2,9 +2,9 @@ import { useState } from "react";
 const Discount = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="h-screen flex justify-center sm:justify-evenly items-center bg-black flex-col font-mono discount">
+    <div className="h-screen flex justify-center sm:justify-evenly items-center bg-black flex-col discount font-nova_square">
       <div className="text-white flex flex-col gap-3 sm:gap-6  sm:h-[75%]">
-        <div className="uppercase flex justify-center text-[1.5rem] sm:text-[2.5rem] font-mono mt-12">
+        <div className="uppercase flex justify-center text-[1.5rem] sm:text-[2.5rem]">
           {" "}
           contingent leader
         </div>
@@ -27,10 +27,10 @@ const Discount = () => {
               Bulk Discount
             </a>
           </div>
-          <div className=" sm:p-4 m-4 sm:m-4 p-1 max-h-[80%] items-center justify-center sm:h-fit text-center sm:w-3/4">
+          <div className="items-center justify-center max-w-[80%] mx-auto  sm:w-[60%] sm:p-1 card-grad p-2 mt-4 ">
             {!toggle ? (
-              <div className="flex flex-col items-center justify-center">
-                <div className="p-2 font-serif text-[0.9rem] sm:text-[1.5rem]">
+              <div className="flex flex-col items-center  justify-center">
+                <div className="p-2 text-[0.9rem] sm:text-[1.5rem]">
                   Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.
                   Simply bring 20 registrations to Varcahs'23 website along with
                   20 accomodations to Varchs'23 Sports fest.
@@ -69,7 +69,7 @@ const Discount = () => {
                     {" "}
                     For contingent size of 40+, bulk discount of Rs.49 will be
                     provided for each accommodation. 
-                    <p className="inline italic font-serif">
+                    <p className="inline italic">
                     *Must have atleast 40
                     people opting accommodation{" "}
                     </p>
@@ -78,7 +78,7 @@ const Discount = () => {
                     {" "}
                     For contingent size of 50+, bulk discount of Rs.149 will be
                     provided for each accommodation. 
-                    <p className="inline italic font-serif">
+                    <p className="inline italic">
                       *Must have atleast 50
                     people opting accommodation{" "}
                       </p>
@@ -87,7 +87,7 @@ const Discount = () => {
                     {" "}
                     For contingent size of 80+, bulk discount of Rs.199 will be
                     provided for each accommodation. 
-                    <p className="inline italic font-serif">
+                    <p className="inline italic">
 
                     *Must have atleast 80
                     people opting accommodation{" "}

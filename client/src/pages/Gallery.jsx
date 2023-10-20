@@ -3,7 +3,7 @@ import "./gallery.css";
 const Gallery = () => {
   return (
     <main className="m-0 p-0 flex items-center flex-col gap-6 gallery-bg h-[500px] w-screen">
-      <div className="text-center text-[75px] font-Londrina_sketch text-emerald-500 uppercase">
+      <div className="text-center text-[3em] text-white font-nova_square uppercase">
         gallery
       </div>
       <div className="scope my-12 sm:w-[200px] w-[150px]">

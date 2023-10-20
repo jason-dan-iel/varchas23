@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const TeamCard = ({ index, para }) => {
   return (
     <div
-      className="w-3/4 mx-auto p-[1px] rounded-[20px] shadow-lg shadow-[#00CCFF]"
+      className="w-3/4 mx-auto p-[1px] rounded-[20px] "
     >
       <div
-        className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
+        className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col card-grad "
       >
-        <p className="text-[#9fffef] xl:text-2xl sm:text-center">{para}</p>
+        <p className="text-[#9fffef] xl:text-2xl">{para}</p>
 
       </div>
     </div>
@@ -19,9 +17,9 @@ const TeamCard = ({ index, para }) => {
 
 const About = () => {
   return (
-    <main className="relative w-full h-full mx-auto mb-12  max-w-7xl z-0 flex flex-col items-center justify-center">
-      <div className="text-emerald-500 text-[60px] sm:text-[100px] font-Eczar uppercase">about us </div>
-      <div className="mt-5 flex flex-wrap gap-10 font-mono uppercase">
+    <main className="relative w-full h-full mx-auto mb-12  max-w-7xl z-0 flex flex-col items-center justify-center font-nova_square ">
+      <div className="text-[3em] uppercase text-white">about us </div>
+      <div className="mt-5 flex flex-wrap gap-10 uppercase">
         <TeamCard
           index={1}
           para={"Varchas stands as the annual sports festival of IIT Jodhpur and holds the distinction of being the largest sporting event in North-West India. Varchas is a celebration of the spirit of sportsmanship, offering a prominent platform to showcase the dedication and hard work invested by various teams to attain excellence in their respective sporting disciplines. Since its inception in 2011, the prestige and grandeur of Varchas has extended far and wide, gaining recognition among the most esteemed colleges and universities in India"}

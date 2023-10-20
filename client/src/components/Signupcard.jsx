@@ -42,9 +42,9 @@ export default function Signupcard() {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            // alert(error.response.data.detail);
-            sessionStorage.clear();
-            navigate("/login")
+          alert('Sorry For the inconvinience. Kindly try again');
+          sessionStorage.clear();
+          window.location.reload();
         }
       });
   };

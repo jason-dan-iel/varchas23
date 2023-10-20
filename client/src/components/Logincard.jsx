@@ -46,8 +46,9 @@ export default function Logincard() {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            alert(error.response.data.detail);
-
+          alert('Sorry For the inconvinience. Kindly try again');
+          sessionStorage.clear();
+          window.location.reload();
         }
       });
     // console.log(loginState);

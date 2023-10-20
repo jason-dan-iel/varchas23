@@ -27,11 +27,13 @@ import OIL from "./OIL.svg"
 import yonex from "./yonex.svg"
 import sbi from "./sbi.svg"
 import mera from "./mera.png"
+import maillogo from "./maillogo.svg"
 
 
 
 export {
     CB,
+    maillogo,
     mera,
     sbi,
     yonex,

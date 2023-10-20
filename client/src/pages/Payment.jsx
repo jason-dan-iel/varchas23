@@ -32,9 +32,10 @@ const Payment = () => {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            // alert(error.response.data.detail);
-            sessionStorage.clear();
-            navigate("/login");
+          alert('Session Expired. Kindly login again');
+          sessionStorage.clear();
+          window.location.reload();
+          window.location.href='/login'
         }
       });
   }, []);

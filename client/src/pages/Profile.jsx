@@ -29,9 +29,10 @@ export default function Profiles() {
             alert(error.response.data.message);
         }
         if (error.response && error.response.data && error.response.data.detail){
-            // alert(error.response.data.detail);
+            alert('Session Expired. Kindly login again');
             sessionStorage.clear();
-            navigate("/login")
+            window.location.reload();
+            window.location.href='/login'
         }
       });
   };

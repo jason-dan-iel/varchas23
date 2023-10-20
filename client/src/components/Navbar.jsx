@@ -10,8 +10,8 @@ const Navbar = () => {
   const location = useLocation().pathname;
   const handleLogout = () => {
     sessionStorage.clear();
-    navigate("/");
-    location.reload();
+    window.location.reload();
+    window.location.href='/login'
   };
 
   const token = sessionStorage.getItem("Token");

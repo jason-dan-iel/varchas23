@@ -26,11 +26,13 @@ import redbull from "./redbull.svg"
 import OIL from "./OIL.svg"
 import yonex from "./yonex.svg"
 import sbi from "./sbi.svg"
+import mera from "./mera.png"
 
 
 
 export {
     CB,
+    mera,
     sbi,
     yonex,
     OIL,

@@ -77,6 +77,10 @@ const VTeam = () => {
               <div className="">Category -{">"}</div>
               <div className="">{val.category}</div>
             </div>
+            <div className="flex justify-between text-[1rem] gap-10">
+              <div className="">Event -{">"}</div>
+              <div className="">{val.event}</div>
+            </div>
             <div>Player Details</div>
             <div className="flex justify-between text-[1rem] gap-10">
               <br />

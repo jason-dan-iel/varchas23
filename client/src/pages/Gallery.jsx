@@ -2,7 +2,7 @@ import "./gallery.css";
 
 const Gallery = () => {
   return (
-    <main className="m-0 p-0 h-fit mb-48">
+    <main className="m-0 p-0 h-fit pb-48 gallery">
       <div className="text-center text-[3em] text-white font-nova_square uppercase">
         gallery
       </div>

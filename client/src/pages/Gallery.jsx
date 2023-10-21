@@ -7,26 +7,26 @@ const Gallery = () => {
         gallery
       </div>
       <div className="wrapper mt-10">
-            <img  src="/gallery/G1.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G2.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G3.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G1.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G2.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G3.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
             {/* <img  src="/gallery/G4.JPG" alt="" className="h-[18rem] w-96" /> */}
-            <img  src="/gallery/G5.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G5.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
             {/* <img  src="/gallery/G6.JPG" alt="" className="h-[18rem] w-96" /> */}
-            <img  src="/gallery/G7.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G8.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G9.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G10.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G11.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G12.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G7.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G8.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G9.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G10.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G11.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G12.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
             {/* <img  src="/gallery/G13.JPG" alt="" className="h-[18rem] w-96" /> */}
             {/* <img  src="/gallery/G14.JPG" alt="" className="h-[18rem] w-96" /> */}
             {/* <img  src="/gallery/G15.JPG" alt="" className="h-[18rem] w-96" /> */}
-            <img  src="/gallery/G16.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G17.JPG" alt="" className="h-[18rem] w-96" />
-            <img  src="/gallery/G18.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G16.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G17.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
+            <img  src="/gallery/G18.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
             {/* <img  src="/gallery/G19.JPG" alt="" className="h-[18rem] w-96" /> */}
-            <img  src="/gallery/G20.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G20.JPG" alt="" className="h-[18rem] w-96 w-24 h-24" />
       </div>
     </main>
   );

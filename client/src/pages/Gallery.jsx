@@ -26,7 +26,7 @@ const Gallery = () => {
             <img  src="/gallery/G17.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
             <img  src="/gallery/G18.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24"  />
             {/* <img  src="/gallery/G19.JPG" alt="" className="h-[18rem] w-96" /> */}
-            <img  src="/gallery/G20.JPG" alt="" className="h-[18rem] w-96 w-24 h-24" />
+            <img  src="/gallery/G20.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24" />
       </div>
     </main>
   );

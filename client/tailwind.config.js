@@ -30,6 +30,7 @@ export const theme = {
       Bungee_outline: ['Bungee Outline', 'cursive'],
       nova_square: ['Nova Square', 'sans'],
       roboto: ["Roboto Condensed", 'sans-serif'],
+      robm: ['Roboto Mono', 'monospace'],
     },
   },
 };

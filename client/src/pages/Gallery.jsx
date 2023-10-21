@@ -2,31 +2,31 @@ import "./gallery.css";
 
 const Gallery = () => {
   return (
-    <main className="m-0 p-0 flex items-center flex-col gap-6 gallery-bg h-[500px] w-screen">
+    <main className="m-0 p-0 h-fit mb-48">
       <div className="text-center text-[3em] text-white font-nova_square uppercase">
         gallery
       </div>
-      <div className="scope my-12 sm:w-[200px] w-[150px]">
-            <span style={{'--i':1}}><img  src="/gallery/G1.JPG" alt="" /></span>
-            <span style={{'--i':2}}><img  src="/gallery/G2.JPG" alt="" /></span>
-            <span style={{'--i':3}}><img  src="/gallery/G3.JPG" alt="" /></span>
-            <span style={{'--i':4}}><img  src="/gallery/G4.JPG" alt="" /></span>
-            <span style={{'--i':5}}><img  src="/gallery/G5.JPG" alt="" /></span>
-            <span style={{'--i':6}}><img  src="/gallery/G6.JPG" alt="" /></span>
-            <span style={{'--i':7}}><img  src="/gallery/G7.JPG" alt="" /></span>
-            <span style={{'--i':8}}><img  src="/gallery/G8.JPG" alt="" /></span>
-            <span style={{'--i':9}}><img  src="/gallery/G9.JPG" alt="" /></span>
-            <span style={{'--i':10}}><img  src="/gallery/G10.JPG" alt="" /></span>
-            <span style={{'--i':11}}><img  src="/gallery/G11.JPG" alt="" /></span>
-            <span style={{'--i':12}}><img  src="/gallery/G12.JPG" alt="" /></span>
-            <span style={{'--i':13}}><img  src="/gallery/G13.JPG" alt="" /></span>
-            <span style={{'--i':14}}><img  src="/gallery/G14.JPG" alt="" /></span>
-            <span style={{'--i':15}}><img  src="/gallery/G15.JPG" alt="" /></span>
-            <span style={{'--i':16}}><img  src="/gallery/G16.JPG" alt="" /></span>
-            <span style={{'--i':17}}><img  src="/gallery/G17.JPG" alt="" /></span>
-            <span style={{'--i':18}}><img  src="/gallery/G18.JPG" alt="" /></span>
-            <span style={{'--i':19}}><img  src="/gallery/G19.JPG" alt="" /></span>
-            <span style={{'--i':20}}><img  src="/gallery/G20.JPG" alt="" /></span>
+      <div className="wrapper mt-10">
+            <img  src="/gallery/G1.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G2.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G3.JPG" alt="" className="h-[18rem] w-96" />
+            {/* <img  src="/gallery/G4.JPG" alt="" className="h-[18rem] w-96" /> */}
+            <img  src="/gallery/G5.JPG" alt="" className="h-[18rem] w-96" />
+            {/* <img  src="/gallery/G6.JPG" alt="" className="h-[18rem] w-96" /> */}
+            <img  src="/gallery/G7.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G8.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G9.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G10.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G11.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G12.JPG" alt="" className="h-[18rem] w-96" />
+            {/* <img  src="/gallery/G13.JPG" alt="" className="h-[18rem] w-96" /> */}
+            {/* <img  src="/gallery/G14.JPG" alt="" className="h-[18rem] w-96" /> */}
+            {/* <img  src="/gallery/G15.JPG" alt="" className="h-[18rem] w-96" /> */}
+            <img  src="/gallery/G16.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G17.JPG" alt="" className="h-[18rem] w-96" />
+            <img  src="/gallery/G18.JPG" alt="" className="h-[18rem] w-96" />
+            {/* <img  src="/gallery/G19.JPG" alt="" className="h-[18rem] w-96" /> */}
+            <img  src="/gallery/G20.JPG" alt="" className="h-[18rem] w-96" />
       </div>
     </main>
   );

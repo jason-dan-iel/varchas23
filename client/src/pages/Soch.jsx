@@ -14,7 +14,7 @@ const TeamCard = ({ index, para }) => {
 
             className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col card-grad"
           >
-            <p className="text-[#9fffef] xl:text-2xl">{para}</p>
+            <p className="text-[#9fffef] xl:text-2xl font-robm">{para}</p>
 
           </div>
         </div>

@@ -15,7 +15,6 @@ import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
 import Dcricket from "./sports/c";
-import Elevator from "./components/elevator";
 
 const App = () => {
 
@@ -27,7 +26,6 @@ const App = () => {
           <div className="">
             <Navbar />
             {/* <StarsCanvas /> */}
-            {/* <Elevator /> */}
 
           </div>
 

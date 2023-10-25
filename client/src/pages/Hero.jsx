@@ -1,4 +1,5 @@
 const Hero = () => {
+  
   return (
     <div
       className={` h-screen flex-1 flex-col xl:flex-row  right-0 bg-gallery bg-cover bg-no-repeat `}

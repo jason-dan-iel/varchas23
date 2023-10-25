@@ -42,7 +42,7 @@ export default function Profiles() {
   }, []);
 
   return (
-    <section className="h-screen items-center flex w-screen flex-col justify-center gap-4">
+    <section className="bg-[#222222]  h-screen items-center flex w-screen flex-col justify-center gap-4">
       <div className="flex flex-col font-mono items-center justify-center  w-fit p-10 rounded-2xl max-h-[70%] shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10 text-white">
         <div className=" text-[3rem]">User Profile</div>
         <div className="w-full">

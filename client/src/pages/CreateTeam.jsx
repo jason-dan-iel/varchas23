@@ -136,7 +136,7 @@ const TeamCreate = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center ">
+    <section className="bg-[#222222] h-screen flex items-center justify-center ">
       {/* <Comingsoon /> */}
       <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
         <Header heading="Event Registration" logoUrl={"/VLW.png"} />

@@ -5,7 +5,7 @@ const Hero = () => {
     >
       <main className="h-screen flex justify-center items-center sm:items-start">
         <div className="flex flex-col gap-2 justify-end items-end mx-4 px-4">
-          <div className="sm:block hidden mt-12">
+          <div className="sm:block hidden mt-12 //mt-32">
             <img src="../logo.png" className="z-15 w-[200px] h-[200px]" />
             <p className="text-center uppercase font-nova_square text-[#09df9a] -mt-[14px]">3rd - 5th november</p>
           </div>

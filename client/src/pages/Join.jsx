@@ -44,7 +44,7 @@ const TeamJoin = () => {
       .then((result) => {
         alert(result.data.message);
         // sessionStorage.setItem("team_token", result.data.team_token);
-        naviage("/");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

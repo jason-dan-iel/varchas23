@@ -25,7 +25,8 @@ const App = () => {
         <Router>
           <div className="">
             <Navbar />
-            <StarsCanvas />
+            {/* <StarsCanvas /> */}
+
           </div>
 
           <Routes>

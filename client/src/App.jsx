@@ -4,7 +4,6 @@ import Sponsors from "./pages/Sponsors";
 import Team from "./pages/Team";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StarsCanvas from "./components/canvas/Stars";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
@@ -25,7 +24,6 @@ const App = () => {
         <Router>
           <div className="">
             <Navbar />
-            {/* <StarsCanvas /> */}
 
           </div>
 

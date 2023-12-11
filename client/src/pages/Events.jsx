@@ -61,6 +61,9 @@ const Events = () => {
           <TeamCard key={service.title} index={index} {...service} />
         ))}
       </div>
+      <div className="text-red-800 mt-8 flex justify-center text-2xl ">
+        *All Registrations are Non-Refundable
+      </div>
     </main>
   )
 }

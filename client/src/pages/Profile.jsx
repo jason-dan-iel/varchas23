@@ -18,8 +18,10 @@ export default function Profiles() {
       method: "get",
       url: "https://api.varchas23.in/account/displayProfile/",
     };
+    console.log(token)
     await axios(configuration)
       .then((result) => {
+        console.log(result)
         setDetails(result.data);
         console.log(details);
       })
